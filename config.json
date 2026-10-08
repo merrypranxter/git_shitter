@@ -1,0 +1,208 @@
+{
+  "name": "THE GIT SHITTER",
+  "owner": "merrypranxter",
+  "model": "gemini-2.5-flash-lite",
+  "pack_size": 10,
+  "hybrid_pack_size": 8,
+  "source_excerpt_chars": 8500,
+  "solo": [
+    {
+      "repo": "Mathgasm",
+      "preset": "dingbat",
+      "focus": "unusual math, topology, alien closed contours"
+    },
+    {
+      "repo": "fractals",
+      "preset": "dingbat",
+      "focus": "boundary iteration and scale tricks"
+    },
+    {
+      "repo": "reaction_diffusion",
+      "preset": "dingbat",
+      "focus": "Turing morphogenesis and cut-paper outlines"
+    },
+    {
+      "repo": "quasicrystals",
+      "preset": "dingbat",
+      "focus": "aperiodic symmetry and strange repetition"
+    },
+    {
+      "repo": "slime_molds",
+      "preset": "dingbat",
+      "focus": "growth paths, adaptive branch structures"
+    },
+    {
+      "repo": "damage_aesthetics",
+      "preset": "gif_asset",
+      "focus": "experimental signal damage"
+    },
+    {
+      "repo": "op_art_style",
+      "preset": "gif_asset",
+      "focus": "moire, optical oscillation and interference"
+    },
+    {
+      "repo": "early_internet_aesthetic",
+      "preset": "gif_asset",
+      "focus": "1990s/2000s maximalist web decorations"
+    },
+    {
+      "repo": "shaderforge3",
+      "preset": "shader",
+      "focus": "new real-time image processing mechanisms"
+    },
+    {
+      "repo": "merry-style",
+      "preset": "image_art",
+      "focus": "maximalist acidic weird imagery"
+    },
+    {
+      "repo": "daddydingy",
+      "preset": "feature",
+      "focus": "vector glyphs, keyboard mapping and TTF export"
+    },
+    {
+      "repo": "fashion",
+      "preset": "image_art",
+      "focus": "inventive garments and maximalist surfaces"
+    }
+  ],
+  "hybrids": [
+    {
+      "sources": [
+        {
+          "repo": "slime_molds",
+          "role": "adaptive pathfinding and cellular branching"
+        },
+        {
+          "repo": "klein-fluid-sim",
+          "role": "non-orientable surfaces and fluid continuity"
+        },
+        {
+          "repo": "LV426",
+          "role": "alien biome aesthetic; imaginative xenotunnels"
+        }
+      ],
+      "preset": "image_art",
+      "focus": "Non-Euclidean slime molds making living xenotunnels; closed paths reverse inside/outside orientation, pumping networks build architecture"
+    },
+    {
+      "sources": [
+        {
+          "repo": "quasicrystals",
+          "role": "aperiodic scaffold symmetries"
+        },
+        {
+          "repo": "reaction_diffusion",
+          "role": "local pattern-producing activator-inhibitor dynamics"
+        }
+      ],
+      "preset": "dingbat",
+      "focus": "Morphogenesis spreading through a quasicrystalline scaffold; warped 2D traceable glyphs and open-centered halos"
+    },
+    {
+      "sources": [
+        {
+          "repo": "damage_aesthetics",
+          "role": "signal failure and media artifacts"
+        },
+        {
+          "repo": "op_art_style",
+          "role": "moire and optical interference"
+        },
+        {
+          "repo": "early_internet_aesthetic",
+          "role": "animated early-web decoration"
+        }
+      ],
+      "preset": "gif_asset",
+      "focus": "Moire-bent web GIF parasites; compositable decorative assets made of geometric signal breakdown"
+    },
+    {
+      "sources": [
+        {
+          "repo": "shaderforge3",
+          "role": "GPU pixel processing"
+        },
+        {
+          "repo": "dream_physics",
+          "role": "deliberately impossible motion behavior"
+        },
+        {
+          "repo": "fractals",
+          "role": "scale-recursive boundaries"
+        }
+      ],
+      "preset": "shader",
+      "focus": "Implementable visual shaders for impossible motion with recursive geometry and controllable parameters"
+    },
+    {
+      "sources": [
+        {
+          "repo": "Mathgasm",
+          "role": "topological invariants and math oddities"
+        },
+        {
+          "repo": "slime_molds",
+          "role": "adaptive branching networks"
+        }
+      ],
+      "preset": "dingbat",
+      "focus": "Mathematical grammar of living connectivity made into bold black-and-white decorative silhouettes"
+    },
+    {
+      "sources": [
+        {
+          "repo": "cultural-motifs",
+          "role": "specific documented motifs, with attribution"
+        },
+        {
+          "repo": "fashion",
+          "role": "garment construction"
+        },
+        {
+          "repo": "psychedelic_pop_style",
+          "role": "bold pop optical color"
+        }
+      ],
+      "preset": "image_art",
+      "focus": "Morphological fashion inventions with careful source accuracy and no fabricated cultural provenance"
+    },
+    {
+      "sources": [
+        {
+          "repo": "daddydingy",
+          "role": "SVG-to-TTF font creation"
+        },
+        {
+          "repo": "Mathgasm",
+          "role": "mathematical motif structures"
+        },
+        {
+          "repo": "early_internet_aesthetic",
+          "role": "GIF culture and kitschy decoration"
+        }
+      ],
+      "preset": "feature",
+      "focus": "Low-cost browser features for generating dingbat sequences into animated visual typography"
+    },
+    {
+      "sources": [
+        {
+          "repo": "retrofuturism",
+          "role": "imagined futures"
+        },
+        {
+          "repo": "pixel_voxel",
+          "role": "pixel and voxel construction"
+        },
+        {
+          "repo": "remotion",
+          "role": "procedural animation"
+        }
+      ],
+      "preset": "gif_asset",
+      "focus": "Export-friendly retrofuture animated machine ornaments, deliberately wonky and high-impact"
+    }
+  ]
+}
