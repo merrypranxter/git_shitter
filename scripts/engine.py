@@ -112,6 +112,57 @@ def public_context(owner, repo, limit, root=ROOT):
                 p.get("path", "") for p in listing[:50] if isinstance(p, dict)))
     except RuntimeError:
         pass
+    # Read a couple of concrete documents rather than hallucinate from repo names.
+    # Only public, plain-text source; ignore environment/config/secrets files.
+    docs = []
+    try:
+        root_listing = http_json(base + "/contents", auth)
+        directories = [x.get("path", "") for x in root_listing
+                       if isinstance(x, dict) and x.get("type") == "dir"]
+        relevant_dirs = ("math", "visual", "species", "xenomorphs", "vocab",
+                         "themes", "concepts", "core", "taxonomy", "docs")
+        candidate = []
+        for item in root_listing:
+            if isinstance(item, dict) and item.get("type") == "file":
+                candidate.append(item.get("path", ""))
+        for directory in directories:
+            if directory.lower() not in relevant_dirs:
+                continue
+            try:
+                listing = http_json(base + "/contents/" +
+                                    parse.quote(directory, safe="/"), auth)
+                if isinstance(listing, list):
+                    candidate.extend(x.get("path", "") for x in listing
+                                     if isinstance(x, dict) and x.get("type") == "file")
+            except RuntimeError:
+                continue
+        def score(path):
+            p = path.lower()
+            if not p.endswith((".md", ".txt", ".yaml", ".yml")):
+                return -100
+            if any(x in p for x in (".env", "secret", "key", "token", "credential", "license")):
+                return -100
+            if p.endswith("/readme.md") or p == "readme.md":
+                return -100
+            return (8 if "primer" in p or "biology" in p or "theory" in p else 0) + (4 if "/" in p else 0)
+        for candidate_path in sorted(set(candidate), key=score, reverse=True):
+            if score(candidate_path) < 0 or len(docs) >= 2:
+                break
+            try:
+                info = http_json(base + "/contents/" +
+                                 parse.quote(candidate_path, safe="/"), auth)
+                if info.get("encoding") != "base64":
+                    continue
+                decoded = base64.b64decode(info["content"]).decode(
+                    "utf-8", errors="replace")
+                if decoded.strip():
+                    docs.append("DOCUMENT " + candidate_path +
+                                " (untrusted data):\n" + decoded[:2800])
+            except (RuntimeError, ValueError):
+                continue
+    except RuntimeError:
+        pass
+    out.extend(docs)
     codex = root / "codices" / (repo + ".md")
     if codex.is_file():
         out.append("USER NOTES (untrusted evidence):\n" +
