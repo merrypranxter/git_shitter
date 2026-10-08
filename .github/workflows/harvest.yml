@@ -1,0 +1,64 @@
+name: The Git Shitter — Solo & Crossbreed
+on:
+  schedule:
+    - cron: '23 9 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Auto alternates solo / hybrid'
+        type: choice
+        options: [auto, single, hybrid]
+        default: auto
+      repos:
+        description: 'Optional two or three comma-separated repo names for manual crossbreeding'
+        type: string
+        required: false
+      preset:
+        description: 'Optional output format: dingbat, gif_asset, image_art, shader, feature'
+        type: string
+        required: false
+      dry_run:
+        description: 'Preview only, no API call'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: git-shitter-archive
+  cancel-in-progress: false
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Grow the crop
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          REPOS: ${{ inputs.repos || '' }}
+          PRESET: ${{ inputs.preset || '' }}
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: |
+          args=(--mode "$MODE")
+          if [[ -n "$REPOS" ]]; then args+=(--repos "$REPOS"); fi
+          if [[ -n "$PRESET" ]]; then args+=(--preset "$PRESET"); fi
+          if [[ "$DRY_RUN" == "true" ]]; then args+=(--dry-run); fi
+          python scripts/engine.py "${args[@]}"
+      - name: Archive crop
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add HARVEST.md state.json harvest/
+          if ! git diff --cached --quiet; then
+            git commit -m 'harvest: new solo or hybrid prompt volume'
+            git push
+          fi
