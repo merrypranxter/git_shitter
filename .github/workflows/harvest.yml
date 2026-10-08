@@ -52,6 +52,12 @@ jobs:
           if [[ -n "$PRESET" ]]; then args+=(--preset "$PRESET"); fi
           if [[ "$DRY_RUN" == "true" ]]; then args+=(--dry-run); fi
           python scripts/engine.py "${args[@]}"
+      - name: Upload free preview
+        if: ${{ inputs.dry_run == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-shitter-prompt-preview
+          path: PREVIEW.md
       - name: Archive crop
         if: ${{ inputs.dry_run != true }}
         run: |
