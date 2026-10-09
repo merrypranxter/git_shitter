@@ -1,0 +1,39 @@
+# tropical_geometry — REPO SEED
+Status: SPECIFICATION ONLY.
+
+## The Goldmine
+A different geometry of sharp branches, polyhedral ridges and polygonal domains, based on real tropical algebra rather than fake "angular fractal" keywords. Build corner-locus geometry from a max-plus polynomial and turn it into alien maps, sigils and animated contour families.
+
+## Mathematical spine
+Use max-plus convention: tropical "addition" a⊕b=max(a,b); tropical "multiplication" a⊗b=a+b. A tropical polynomial in two variables is a piecewise-linear convex function
+F(x,y) = max_i (a_i*x + b_i*y + c_i)
+for finitely many affine forms. Its tropical curve is the *corner locus* where the maximum is attained by at least two distinct forms. The regions where one term uniquely wins are polygonal/polyhedral cells. Do not confuse a smooth usual polynomial plot with a tropical curve. Coincident terms need deduplication and tie handling.
+
+## Pipeline / implementation
+1. Input a finite term array [{ax, by, c}] and a clip rectangle.
+2. Evaluate winning term and margin to runner-up on a regular pixel field for preview.
+3. For accurate SVG: clip planar cells by half-plane inequalities F_i >= F_j; derive shared cell boundaries as line segments; deduplicate edges.
+4. Support the dual subdivision idea as educational metadata where available; not essential for MVP.
+5. Animate constant coefficients c_i for genuine combinatorial changes (record critical transitions); optionally modulate a separate art overlay with `moire` or `color_fields`.
+6. Export polygonal cells, junction nodes and separate vector path groups.
+
+## Module plan
+`src/math/maxplus.js`, `src/math/halfplane.js`, `src/geometry/cells.js`, `src/geometry/edges.js`, `src/visual/palette.js`, `src/export/svg.js`, `src/app/demo.js`, `presets/terms.json`, `docs/math.md`, `tests/`.
+
+## Parameters
+`terms, domain_width, domain_height, clip_bounds, edge_width, node_radius, palette, coefficient_drift, margin_threshold, seed`.
+
+## Presets
+- `tripod`: F=max(0,x,y) produces the canonical three-ray tropical line.
+- `alien_city_zoning`: six affine forms make polyhedral districts and edge intersections.
+- `crystal_court`: multiple generated max-plus polynomials layered without falsely claiming their union is one tropical curve.
+- `black_glyph_network`: bold connected polygonal ridges and large negative spaces for SVG dingbats.
+
+## Ecosystem hooks
+`color_fields` as a palette transfer only; `moire` as independently composited optical interference; `tesselations` for grid/tiling comparisons; `quasicrystals` for combinatorial contrasts; `daddydingy` for glyph exports; `monetize` eventually for source/preset bundles.
+
+## Tests / win condition
+For F=max(0,x,y) inside [-1,1]², confirm the expected three rays meet at the origin and divide the clip domain into three winner regions; assert exported vector edges lie inside clip bounds. Handle duplicate and dominated terms without spurious branches.
+
+## Closing directive
+Build the max-plus evaluator and half-plane cell clipper first. Add precise SVG export, known toy cases, then artistic examples and coefficient animation. Keep it accurate, deterministic, and easy to compose as a geometry source for other repos.
