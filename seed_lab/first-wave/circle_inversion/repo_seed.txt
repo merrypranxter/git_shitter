@@ -1,0 +1,39 @@
+# circle_inversion — REPO SEED
+Status: SPECIFICATION ONLY. A new source repo does not exist yet.
+
+## The Goldmine
+Use actual circle inversion as a visual operator: a perfectly ordinary family of lines, circles, glyphs or growth networks becomes an alien ornamental geometry under a single mathematical mapping. This is a sibling to, not a duplicate of, `apollonian_gasket`: the primary product is a reusable arbitrary-geometry inversion engine with controllable singularity handling and SVG export.
+
+## Mathematical spine
+Choose inversion center c=(cx,cy), radius R>0. For a point p != c, let q=p-c. The inverted point is p' = c + (R²/||q||²)q. Inversion fixes points on its circle; points very near c are sent very far away. Generalized circles behave as follows: a circle not through c maps to another circle, a circle through c maps to a line, and a line not through c maps to a circle through c.
+
+Do **not** describe this as a conformal mapping at the inversion center; it is undefined there and orientation-reversing away from it. A naive straight segment endpoint transform is wrong because inverted segments are generally arcs.
+
+## Implementation strategy
+- Core `invertPoint(p, center, radius, epsilon)`: return explicit missing/unbounded status for ||p-c||<epsilon rather than pretending it is finite.
+- Curves: sample polylines adaptively in source space with refinement driven by curvature after inversion; clip to finite export viewport.
+- Closed outlines: preserve subpath breaks and fill rules; inverted polygons may require arc tessellation to prevent false straight edges.
+- Optional analytical circle/line transforms for high-quality vectors and fewer points.
+- Multi-center composition: apply inversions in a user-defined ordered sequence; never imply it is commutative.
+- Show poles/singularities, prevent NaN/Infinity in SVG, preserve reproducible seeds.
+
+## Architectural sketch
+`src/math/inversion.js`, `src/math/circles.js`, `src/geometry/curve-sampler.js`, `src/geometry/clip.js`, `src/export/svg.js`, `src/ui/demo.js`, `presets/*.json`, `docs/math.md`, `tests/*.test.js`.
+
+## User controls
+`center_x, center_y, radius, steps, adaptive_tolerance_px, viewport, clip_mode, input_geometry, stroke_width, positive_negative, mirror, seed`.
+
+## Preset visual regimes
+- `alien_orbit_seal`: concentric circular motifs inverted across an offset center.
+- `inverted_mycelium`: import network paths from `slime_molds`; turn branch curves into nested arcing filaments.
+- `impossible_lace`: start from `guilloche_engine` (once it exists) and invert highly regular line meshes.
+- `void_pupil`: large black ring ornament with deliberate open negative-space center for tiny dingbats.
+
+## Ecosystem hooks
+Existing siblings: `apollonian_gasket` (circle packing), `noneuclidean` (Möbius/inversive vocabulary), `op_art_style` (interference treatments), `slime_molds` (source paths), `daddydingy` (SVG dingbats), `git_shitter` (crossbreed prompts), `monetize` (later derivative packs). Source geometry and style treatment must remain separable.
+
+## Output contracts / quality gates
+Export standalone white-background black-fill SVG for dingbats, optional transparent PNG, and mathematically intact SVG strokes. Tests: fixed points on inversion circle; involution (invert twice recovers p within tolerance); center singularity is handled; numerical output has no NaN; circles-through-center map to a line.
+
+## Build order / closing directive
+Implement and test point inversion first. Add adaptive path sampling, simple SVG exporter, then interactive viewport and presets. The first win is a single seed producing 9 genuinely different black-on-white, individually separable ornamental shapes without manually tracing raster output. No paid inference in the render loop.
