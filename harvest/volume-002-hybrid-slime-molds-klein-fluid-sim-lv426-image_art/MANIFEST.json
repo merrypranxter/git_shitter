@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "image_art",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "repo": "slime_molds",
+      "url": "https://github.com/merrypranxter/slime_molds",
+      "role": "adaptive pathfinding and cellular branching"
+    },
+    {
+      "repo": "klein-fluid-sim",
+      "url": "https://github.com/merrypranxter/klein-fluid-sim",
+      "role": "fluid-dynamics playground (documented); Klein-bottle non-orientability is a speculative math/art lens, not a verified feature"
+    },
+    {
+      "repo": "LV426",
+      "url": "https://github.com/merrypranxter/LV426",
+      "role": "alien biome aesthetic; imaginative xenotunnels"
+    }
+  ]
+}
