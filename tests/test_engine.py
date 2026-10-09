@@ -69,6 +69,19 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(set(dna["required"]), {"slime_molds", "klein-fluid-sim"})
         self.assertFalse(dna["additionalProperties"])
 
+    def test_gemini_payload_requests_structured_json(self):
+        fake_response = {"candidates": [{"content": {
+            "parts": [{"text": json.dumps(SIMPLE)}]}}]}
+        with patch.object(engine, "http_json", return_value=fake_response) as api:
+            result = engine.generate_gemini("prompt", "fake-key", "fake-model",
+                                            "single", CFG["solo"][0], 2)
+        self.assertEqual(result["title"], SIMPLE["title"])
+        payload = api.call_args.args[2]
+        generation = payload["generationConfig"]
+        self.assertEqual(generation["responseMimeType"], "application/json")
+        self.assertEqual(generation["responseJsonSchema"]["properties"]
+                         ["items"]["minItems"], 2)
+
     def test_invalid_first_model_result_gets_one_repair_attempt(self):
         with TemporaryDirectory() as tmp, patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}):
             root = Path(tmp); self.write(root)
