@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "purpose": "Custom Copilot agents for new mathematical and style repositories; staged templates only",
+  "host": "merrypranxter/git_shitter",
+  "branch": "seed-lab/first-wave-math-style",
+  "installed_into_source_repositories": false,
+  "count": 18,
+  "entries": [
+    {
+      "name": "circle_inversion",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/circle_inversion/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/circle_inversion/.github/agents/circle-inversion.agent.md",
+      "destination_agent_path": ".github/agents/circle-inversion.agent.md",
+      "specialist_name": "circle-inversion-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "guilloche_engine",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/guilloche_engine/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/guilloche_engine/.github/agents/guilloche-engine.agent.md",
+      "destination_agent_path": ".github/agents/guilloche-engine.agent.md",
+      "specialist_name": "guilloche-engine-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "catastrophe_theory",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/catastrophe_theory/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/catastrophe_theory/.github/agents/catastrophe-theory.agent.md",
+      "destination_agent_path": ".github/agents/catastrophe-theory.agent.md",
+      "specialist_name": "catastrophe-theory-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "tropical_geometry",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/tropical_geometry/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/tropical_geometry/.github/agents/tropical-geometry.agent.md",
+      "destination_agent_path": ".github/agents/tropical-geometry.agent.md",
+      "specialist_name": "tropical-geometry-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "foil_sticker_aesthetics",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/foil_sticker_aesthetics/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/foil_sticker_aesthetics/.github/agents/foil-sticker-aesthetics.agent.md",
+      "destination_agent_path": ".github/agents/foil-sticker-aesthetics.agent.md",
+      "specialist_name": "foil-sticker-aesthetics-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "cosmic_airbrush_1984",
+      "phase": "first-wave",
+      "seed_path": "seed_lab/first-wave/cosmic_airbrush_1984/repo_seed.txt",
+      "staged_agent_path": "seed_lab/first-wave/cosmic_airbrush_1984/.github/agents/cosmic-airbrush-1984.agent.md",
+      "destination_agent_path": ".github/agents/cosmic-airbrush-1984.agent.md",
+      "specialist_name": "cosmic-airbrush-1984-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "rauzy_fractals",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/rauzy_fractals/.github/agents/rauzy-fractals.agent.md",
+      "destination_agent_path": ".github/agents/rauzy-fractals.agent.md",
+      "specialist_name": "rauzy-fractals-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "braid_groups",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/braid_groups/.github/agents/braid-groups.agent.md",
+      "destination_agent_path": ".github/agents/braid-groups.agent.md",
+      "specialist_name": "braid-groups-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "spectre_monotiles",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/spectre_monotiles/.github/agents/spectre-monotiles.agent.md",
+      "destination_agent_path": ".github/agents/spectre-monotiles.agent.md",
+      "specialist_name": "spectre-monotiles-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "p_adic_dynamics",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/p_adic_dynamics/.github/agents/p-adic-dynamics.agent.md",
+      "destination_agent_path": ".github/agents/p-adic-dynamics.agent.md",
+      "specialist_name": "p-adic-dynamics-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "dessins_denfants",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/dessins_denfants/.github/agents/dessins-denfants.agent.md",
+      "destination_agent_path": ".github/agents/dessins-denfants.agent.md",
+      "specialist_name": "dessins-denfants-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "discrete_morse_theory",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/discrete_morse_theory/.github/agents/discrete-morse-theory.agent.md",
+      "destination_agent_path": ".github/agents/discrete-morse-theory.agent.md",
+      "specialist_name": "discrete-morse-theory-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "spectral_graphs",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/spectral_graphs/.github/agents/spectral-graphs.agent.md",
+      "destination_agent_path": ".github/agents/spectral-graphs.agent.md",
+      "specialist_name": "spectral-graphs-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "mechanical_linkages",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/mechanical_linkages/.github/agents/mechanical-linkages.agent.md",
+      "destination_agent_path": ".github/agents/mechanical-linkages.agent.md",
+      "specialist_name": "mechanical-linkages-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "xerox_rave_flyers",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/xerox_rave_flyers/.github/agents/xerox-rave-flyers.agent.md",
+      "destination_agent_path": ".github/agents/xerox-rave-flyers.agent.md",
+      "specialist_name": "xerox-rave-flyers-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "scientific_transparencies",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/scientific_transparencies/.github/agents/scientific-transparencies.agent.md",
+      "destination_agent_path": ".github/agents/scientific-transparencies.agent.md",
+      "specialist_name": "scientific-transparencies-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "print_registration_chaos",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/print_registration_chaos/.github/agents/print-registration-chaos.agent.md",
+      "destination_agent_path": ".github/agents/print-registration-chaos.agent.md",
+      "specialist_name": "print-registration-chaos-specialist",
+      "status": "staged_only"
+    },
+    {
+      "name": "jelly_plastic_y2k",
+      "phase": "backlog",
+      "seed_path": null,
+      "staged_agent_path": "seed_lab/backlog/jelly_plastic_y2k/.github/agents/jelly-plastic-y2k.agent.md",
+      "destination_agent_path": ".github/agents/jelly-plastic-y2k.agent.md",
+      "specialist_name": "jelly-plastic-y2k-specialist",
+      "status": "staged_only"
+    }
+  ]
+}
