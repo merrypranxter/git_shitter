@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "gif_asset",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "repo": "damage_aesthetics",
+      "url": "https://github.com/merrypranxter/damage_aesthetics",
+      "role": "signal failure and media artifacts"
+    },
+    {
+      "repo": "op_art_style",
+      "url": "https://github.com/merrypranxter/op_art_style",
+      "role": "moire and optical interference"
+    },
+    {
+      "repo": "early_internet_aesthetic",
+      "url": "https://github.com/merrypranxter/early_internet_aesthetic",
+      "role": "animated early-web decoration"
+    }
+  ]
+}
