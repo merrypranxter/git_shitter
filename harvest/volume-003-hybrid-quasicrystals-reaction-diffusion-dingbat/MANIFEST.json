@@ -1,0 +1,17 @@
+{
+  "mode": "hybrid",
+  "preset": "dingbat",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "repo": "quasicrystals",
+      "url": "https://github.com/merrypranxter/quasicrystals",
+      "role": "aperiodic scaffold symmetries"
+    },
+    {
+      "repo": "reaction_diffusion",
+      "url": "https://github.com/merrypranxter/reaction_diffusion",
+      "role": "local pattern-producing activator-inhibitor dynamics"
+    }
+  ]
+}
