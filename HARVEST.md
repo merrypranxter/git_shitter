@@ -5,3 +5,4 @@
 - **HYBRID** [Volume 003 — Aperiodic Morphogenesis: Quasicrystalline Reaction-Diffusion](harvest/volume-003-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-10-09
 - **HYBRID** [Volume 004 — Moiré-Bent Web GIF Parasites](harvest/volume-004-hybrid-damage-aesthetics-op-art-style-early-internet-aesthetic-gif_asset/PROMPTS.md) — damage_aesthetics × op_art_style × early_internet_aesthetic · 2026-10-09
 - **SINGLE** [Volume 005 — Mathgasm Glyphs: Unfolding Alien Contours](harvest/volume-005-single-mathgasm-dingbat/PROMPTS.md) — Mathgasm · 2026-10-09
+- **HYBRID** [Volume 006 — ShaderForge Dream Fractals](harvest/volume-006-hybrid-shaderforge3-dream-physics-fractals-dingbat/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-10-09

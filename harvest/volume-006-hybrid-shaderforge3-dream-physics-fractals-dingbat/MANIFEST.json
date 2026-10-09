@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "dingbat",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "repo": "shaderforge3",
+      "url": "https://github.com/merrypranxter/shaderforge3",
+      "role": "GPU pixel processing"
+    },
+    {
+      "repo": "dream_physics",
+      "url": "https://github.com/merrypranxter/dream_physics",
+      "role": "deliberately impossible motion behavior"
+    },
+    {
+      "repo": "fractals",
+      "url": "https://github.com/merrypranxter/fractals",
+      "role": "scale-recursive boundaries"
+    }
+  ]
+}
