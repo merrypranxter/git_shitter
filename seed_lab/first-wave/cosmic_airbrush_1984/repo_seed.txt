@@ -1,0 +1,48 @@
+# cosmic_airbrush_1984 — REPO SEED
+Status: SPECIFICATION ONLY. This is a reusable visual style grammar, not an attribution to a particular artist.
+
+## The Goldmine
+High-gloss early-1980s commercial sci-fi fantasy: acid candy color, dreamy airbrushed transitions, chrome/opal exaggeration, illustrated UFOs and impossible objects, hand-painted gleam, posterized surface contrast and optional vintage reproduction damage. Instead of "retro 80s" as a prompt buzzword, encode an actionable layer stack, palette behavior, procedural finish passes and anti-drift rules.
+
+## Core aesthetic DNA
+- **Palette**: hot magenta, neon cyan, electric cobalt, lime, orange, violet, blown white and deep synthetic shadow. Allow object colors to remain distinct; avoid generic muted nostalgia.
+- **Forms**: substantial isolated silhouettes—alien heads, prisms, chrome letters, eyeballs, UFO ornaments, impossible geometric relics. Background optional and never mandatory architecture/landscape.
+- **Paint**: soft broad aerosol transitions beneath surgically crisp highlights and tight contour accents; controlled color contamination around edges.
+- **Lighting**: multiple deliberately implausible glam highlights (not physically accurate).
+- **Material**: chrome, candy enamel, gelatin plastic, powdery paint, semi-transparent fluorescent mist.
+- **Print/film finishing**: simulated analog grain, bloom and color registration drift in a finishing pass, NOT baked into geometry.
+- **Layout**: over-the-top album sleeve / thrift-store sci-fi paperback / novelty product graphics, but avoid directly copying recognizable copyrighted compositions.
+
+## Generation and code strategy
+1. Receive shape + depth/normal/mask channels from another repo, or generate SVG primitives as placeholders.
+2. Airbrush pass: blurred nonlinear masks, hue-biased multi-stop ramp fields, local soft occlusion.
+3. Material pass: independent chrome bands (high-contrast luminance stripes), colored rims, contact shadows.
+4. Candy-glow pass: emissive edges and pastel halo masks that do not overwrite focal silhouettes.
+5. Composition pass: constrained maximalist supporting ornaments and controlled negative space.
+6. Optional `analog_film_sim` / `vhs_analog_artifacts` finishing, not default.
+7. Export full-res PNG and style preset JSON; use existing browser/Canvas tools for GIF animation.
+
+## Proposed architecture
+`docs/style-dna.md`, `docs/anti-drift.md`, `docs/material-stack.md`, `src/airbrush.js`, `src/chrome-ramp.js`, `src/candy-glow.js`, `src/compositor.js`, `src/export/png.js`, `presets/style-presets.json`, `examples/`, `tests/`, `context.manifest.json`.
+
+## Core knobs
+`palette, blend_softness, glow_strength, chrome_stripe_contrast, rim_hue_shift, paint_overspray, posterization, vignette, grain, film_wear, composition_density, seed`.
+
+## Visual regimes
+- `chrome_little_green_man`: chrome-and-candy alien sticker art with an acid green face.
+- `blacklight_trophy`: isolated iridescent sci-fi ornament on pure black.
+- `1984_plastic_heaven`: thick gel gradations and shiny sculpted shapes.
+- `attic_vhs_fantasy`: overblown hot colors plus a separate damaged media pass.
+- `blank_dingbat_preview`: no finish, preserves simple source SVG for vector uses.
+
+## Anti-drift
+Not generic synthwave neon cityscapes, not default black/purple gothic horror, not soft-focus pastel vaporwave, not muddy brown "vintage" filters, not obligatory starfields, trees or sunsets. Detail density is configurable; 64px glyphs must retain strong silhouettes.
+
+## Existing sibling hooks
+`retrofuturism` for thematic references; `vintage_blacklight_poster_style` for fluorescent contrast; `merry-style` and `psychedelic_pop_style` for vocabulary; `structural_color` / `shiny` for material approximations; `analog_film_sim` and `vhs_analog_artifacts` for damage. Audit for duplicates before writing yet another glow shader.
+
+## Tests / win condition
+A single unchanged input shape rendered across four style presets must look materially different, while preserving the silhouette and alpha. Output is deterministic by seed. At least one no-background export supports later composition inside `sparklebae` / `sticker_slop`.
+
+## Closing directive
+Define exact style grammar and sample presets, then implement one browser compositor that can accept existing PNG/SVG silhouettes. Build 4 reusable looks with controllable finish levels. Keep model inference outside repeated rendering; the money is in combinable parameter recipes, not daily generated artwork.
