@@ -10,12 +10,14 @@ on:
         options: [auto, single, hybrid]
         default: auto
       repos:
-        description: 'Optional two or three comma-separated repo names for manual crossbreeding'
+        description: 'Optional one repo for solo, or two or three comma-separated repos for crossbreeding'
         type: string
         required: false
       preset:
-        description: 'Optional output format: dingbat, gif_asset, image_art, shader, feature'
-        type: string
+        description: 'Output format (leave blank to use the recipe default)'
+        type: choice
+        options: ['', dingbat, gif_asset, image_art, shader, feature]
+        default: ''
         required: false
       dry_run:
         description: 'Preview only, no API call'

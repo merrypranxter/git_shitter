@@ -39,6 +39,56 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(engine.choose(CFG, {"volumes": 0})[0], "single")
         self.assertEqual(engine.choose(CFG, {"volumes": 1})[0], "hybrid")
         self.assertEqual(engine.choose(CFG, {"volumes": 2})[0], "single")
+    def test_manual_solo_selection(self):
+        for mode in ("single", "auto"):
+            with self.subTest(mode=mode):
+                lane, recipe = engine.choose(
+                    CFG, {"volumes": 1}, mode, ["LV426"], "dingbat")
+                self.assertEqual(lane, "single")
+                self.assertEqual(recipe["repo"], "LV426")
+                self.assertEqual(recipe["preset"], "dingbat")
+        _, recipe = engine.choose(CFG, {}, "single", ["Mathgasm"])
+        self.assertEqual(recipe, CFG["solo"][0])
+        _, recipe = engine.choose(CFG, {}, "single", ["LV426"])
+        self.assertEqual(recipe["preset"], "image_art")
+    def test_manual_hybrid_selection(self):
+        for mode in ("single", "auto", "hybrid"):
+            with self.subTest(mode=mode):
+                lane, recipe = engine.choose(
+                    CFG, {}, mode, ["slime_molds", "klein-fluid-sim"], "dingbat")
+                self.assertEqual(lane, "hybrid")
+                self.assertEqual(
+                    [x["repo"] for x in engine.parents(recipe)],
+                    ["slime_molds", "klein-fluid-sim"])
+        for repos in (["LV426"], ["A", "A"], ["A", "B", "C", "D"]):
+            with self.subTest(repos=repos), self.assertRaises(ValueError):
+                engine.choose(CFG, {}, "hybrid", repos)
+        with self.assertRaises(ValueError):
+            engine.choose(CFG, {}, "single", ["../../foo"])
+    def test_manual_solo_dry_run_offline(self):
+        with TemporaryDirectory() as tmp, patch.dict(os.environ, {}, clear=True):
+            root = Path(tmp); self.write(root)
+            engine.run(root=root, mode="single", repos=["LV426"],
+                       preset="dingbat", dry_run=True)
+            preview = (root / "PREVIEW.md").read_text()
+            self.assertIn("MODE: SOLO", preview)
+            self.assertIn("SOURCE: merrypranxter/LV426", preview)
+            self.assertIn("#000000", preview)
+            self.assertFalse((root / "state.json").exists())
+    def test_manual_solo_archive_preserves_cursors(self):
+        with TemporaryDirectory() as tmp, patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}):
+            root = Path(tmp); self.write(root)
+            state = {"volumes": 1, "solo_cursor": 4, "hybrid_cursor": 3}
+            (root / "state.json").write_text(json.dumps(state))
+            engine.run(root=root, mode="single", repos=["LV426"],
+                       preset="dingbat", fetcher=lambda *args: "Verified source",
+                       writer=lambda *args: SIMPLE)
+            saved = json.loads((root / "state.json").read_text())
+            self.assertEqual(saved, dict(state, volumes=2))
+            folder = next((root / "harvest").iterdir())
+            manifest = json.loads((folder / "MANIFEST.json").read_text())
+            self.assertEqual(manifest["mode"], "single")
+            self.assertEqual(manifest["sources"][0]["repo"], "LV426")
     def test_require_two_or_three_different_parents(self):
         with self.assertRaises(ValueError):
             engine.parents({"sources": ["A", "A"]})

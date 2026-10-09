@@ -8,7 +8,7 @@
 - **SOLO:** Rotate through 12 curated source-repo recipes. One source repo generates a set of 10 standalone, deeply specified creative prompts.
 - **CROSSBREED:** Rotate through 8 curated two- or three-parent recipes. One hybrid generates 8 prompts, each with **source DNA for every parent**, an explicit causal **fusion logic**, a standalone prompt and an explanation of why it's weird.
 - **AUTO:** Alternates SOLO and CROSSBREED after each successful volume. One model call per scheduled run, instead of hammering the API for every repo.
-- **MANUAL MAD SCIENCE:** In the Actions tab you can specify any 2–3 public repos owned by `merrypranxter` to recombine. Set output preset to `dingbat`, `gif_asset`, `image_art`, `shader` or `feature`.
+- **MANUAL MAD SCIENCE:** In the Actions tab you can specify one public repo owned by `merrypranxter` for a solo harvest (`single` or `auto` mode), or 2–3 repos to recombine. Explicit `hybrid` mode requires 2–3 distinct repos. Select the output preset from the dropdown, or leave it blank for the recipe default. Manual repo selections do not advance the curated recipe cursors.
 
 The first curated crossbreeds include **slime_molds × klein-fluid-sim × LV426** (living non-Euclidean xenotunnels), **quasicrystals × reaction_diffusion** (aperiodic organism glyphs), **damage_aesthetics × op_art_style × early_internet_aesthetic** (glitchy optical GIF components), **shaderforge3 × dream_physics × fractals**, and **daddydingy × Mathgasm × early_internet_aesthetic**.
 
@@ -31,6 +31,7 @@ All code uses Python 3.12's standard library. You can preview the *exact generat
 python -m unittest discover -s tests -v
 python scripts/engine.py --mode hybrid --dry-run
 python scripts/engine.py --mode auto --dry-run
+python scripts/engine.py --mode single --repos LV426 --preset dingbat --dry-run
 python scripts/engine.py --repos slime_molds,klein-fluid-sim,LV426 --preset dingbat --dry-run
 ```
 

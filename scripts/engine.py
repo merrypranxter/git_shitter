@@ -183,12 +183,18 @@ def choose(config, state, mode="auto", override=None, preset=None):
     if mode not in ("auto", "single", "hybrid"):
         raise ValueError("Unknown mode " + mode)
     if override:
-        mode = "hybrid"
+        mode = "hybrid" if mode == "hybrid" or len(override) != 1 else "single"
     elif mode == "auto":
         mode = "single" if int(state.get("volumes", 0)) % 2 == 0 else "hybrid"
     if mode == "single":
         rows = config["solo"]
-        recipe = rows[int(state.get("solo_cursor", 0)) % len(rows)]
+        if override:
+            repo = safe_repo(override[0])
+            recipe = next((row for row in rows if row["repo"] == repo), {
+                "repo": repo, "focus": "Discover unusual source mechanisms",
+                "preset": "image_art"})
+        else:
+            recipe = rows[int(state.get("solo_cursor", 0)) % len(rows)]
         if preset:
             recipe = dict(recipe, preset=preset)
         safe_repo(recipe["repo"])
@@ -394,7 +400,7 @@ def run(root=ROOT, mode="auto", repos=None, preset=None, dry_run=False,
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     state["volumes"] = number
     lane_cursor = lane + "_cursor"
-    if not (lane == "hybrid" and repos):
+    if not repos:
         n = len(config["hybrids"] if lane == "hybrid" else config["solo"])
         state[lane_cursor] = (int(state.get(lane_cursor, 0)) + 1) % n
     (root / "state.json").write_text(
@@ -411,7 +417,7 @@ def run(root=ROOT, mode="auto", repos=None, preset=None, dry_run=False,
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument("--mode", choices=["auto", "single", "hybrid"], default="auto")
-    cli.add_argument("--repos", help="comma-separated 2–3 repo names")
+    cli.add_argument("--repos", help="one repo for solo, or comma-separated 2–3 repo names for a hybrid")
     cli.add_argument("--preset", choices=sorted(PRESETS))
     cli.add_argument("--dry-run", action="store_true")
     args = cli.parse_args()
