@@ -1,0 +1,38 @@
+# catastrophe_theory — REPO SEED
+Status: SPECIFICATION ONLY. Mathematical models are real; animated mutant-organism interpretations are art inventions.
+
+## The Goldmine
+Make *qualitative change* the artist's control surface. Instead of smoothly morphing one blob into another, tune a parameter through a bifurcation and watch the number/arrangement of equilibria change. Produce fold, cusp, swallowtail and butterfly-inspired state transitions as vector contours and animated control plots.
+
+## Math spine: potentials and equilibria
+For a cusp catastrophe use a 1D potential V(x;a,b) = x^4/4 + a*x²/2 + b*x. Equilibria satisfy dV/dx = x³ + a*x + b = 0. The discriminant is Δ = -4a³-27b². Crossing Δ=0 changes root multiplicity and typically the number of real equilibria. Stable equilibria of gradient dynamics `dx/dt = -dV/dx` correspond to local minima of V (d²V/dx²>0).
+For fold use V=x³/3 - a*x (stationary x²=a). This simple local model is not a bounded physical potential; keep visualization in a finite region.
+Swallowtail and butterfly are higher-codimension families. Show their genuine control parameter structure rather than claiming any random ripple is a catastrophe.
+
+## Render pipeline
+1. Numerically sample potential/gradient and locate equilibria via root-bracketing + optional refinement.
+2. Display stable and unstable branches distinctly.
+3. Sweep one or two controls with slow interpolation to demonstrate hysteresis **only** when a dynamics/branch-following rule supports it.
+4. Convert equilibrium branches and discriminant curves into SVG paths and contour fills.
+5. Optional second-stage creative *mapping*: branch count drives SDF lobes, fold amplitudes, membrane segmentation, or particle emissions. Label this a visual metaphor, not the underlying theorem.
+
+## File tree plan
+`src/math/potentials.js`, `src/math/roots.js`, `src/math/discriminant.js`, `src/sim/gradient-flow.js`, `src/visual/vector-contours.js`, `src/visual/organism-mapping.js`, `src/export/svg.js`, `src/app/index.js`, `presets/controls.json`, `docs/catastrophe-math.md`, `tests/`.
+
+## Knobs
+`model, a, b, c, integration_dt, damping, basin_seed, contour_levels, lobe_scale, art_mapping_strength, export_frame, seed`.
+
+## Regimes
+- `cusp_wound`: cusp bifurcation graphic interpreted as branching membrane scar.
+- `fold_flip`: stable branch disappears and the selected state jumps.
+- `swallowtail_schematic`: clean mathematical curve with color-coded singularity structure.
+- `catastrophic_ornament`: extract threshold silhouettes for a nine-up dingbat sheet.
+
+## Ecosystem hooks
+`reaction_diffusion` for organic surface texture (separate math), `dream_physics` for intentionally imaginative physical interpretations, `sdf_fields` for shape realization, `git_shitter` for source-grounded crossbreeds. Never describe the style layer as a proof of catastrophe theory.
+
+## Tests / win condition
+For a=-1,b=0, cusp cubic has three distinct real roots; for a=1,b=0 it has one real root; critical discriminant near zero is highlighted. Numerical stability is checked around multiple roots. Demo must visually distinguish dynamics from mathematical bifurcation diagrams.
+
+## Closing directive
+Start with truthful 1D fold+cusp controls and diagrams. Add cusp state tracking. Only then map equilibria to bizarre organism silhouettes. Export single-frame vector forms before animation or shader effects. Local computation only.
