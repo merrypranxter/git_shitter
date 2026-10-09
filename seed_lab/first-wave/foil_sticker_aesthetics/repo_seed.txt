@@ -1,0 +1,45 @@
+# foil_sticker_aesthetics — REPO SEED
+Status: SPECIFICATION ONLY; style and optical-finish vocabulary, not a real commercial sticker printing proof.
+
+## The Goldmine
+Y2K die-cut sticker graphics, simulated diffraction foil, embossed sparkle borders, transparent jelly highlights, and exaggerated fake holographic laminates. The goal is to derive *reusable finish controls* that could be applied to an SVG/dingbat silhouette or animated text, not just collect adjectives.
+
+## The optical caveat
+Real diffraction foil has wavelength- and angle-dependent effects. A flat screen image is a stylized simulation unless it includes a physical view/light model. Separate: (a) graphic rainbow ramp, (b) angle/normal-driven iridescent approximation, (c) fixed procedural sparkle, (d) drop-shadow/emboss illusion. Do not mislabel all gradients as scientifically accurate structural color.
+
+## Surface grammar
+- **Carrier**: die-cut silhouette or imported text/SVG mask, with 2–8px apparent edge radius and optional sticker-white keyline.
+- **Foil**: sharp ribbons of saturated hue, narrow high-intensity prismatic streaks, spectral grain; angle/phase controls.
+- **Embossing**: slight offset bright rim + opposed dark rim, subtle at small scale, no gray muddy fill unless selected.
+- **Sparkle**: sparse star glints with deterministic positions and animated specular travel (readable at 64–256 px).
+- **Print imperfections**: isolated lamination bubbles, hairline registration shifts, foil dropouts, adhesive curl; optional, not always on.
+- **Maximalist kitsch**: combine glitter with chrome and hot neon colors, but maintain clear icon silhouettes.
+
+## Reusable pipeline
+1. Accept input alpha mask or SVG from `daddydingy`, `sparklebae`, `guilloche_engine` or a future glyph generator.
+2. Compute inner/outer distance masks (SDF where possible).
+3. Generate color phase field for foil; optionally derive from 2D normal or height approximation.
+4. Apply edge rims and sparse star glints in separate passes.
+5. Composite output with transparent background and optional die-cut white border.
+6. Export PNG; export GIF/MP4 only when animation runs in existing rendering/export tooling.
+
+## Module plan
+`src/masks/distance-field.js`, `src/materials/foil.js`, `src/materials/chrome.js`, `src/materials/emboss.js`, `src/fx/glints.js`, `src/composite.js`, `src/export/`, `presets/finishes.json`, `docs/visual-dna.md`, `tests/`, `context.manifest.json`.
+
+## Parameters
+`foil_scale, foil_angle, rainbow_phase, ramp_contrast, emboss_depth_px, keyline_width_px, sparkle_density, sparkle_seed, sparkle_speed, lamination_wear, alpha_preservation, export_size`.
+
+## Aesthetic regimes
+- `alien_holo_decal`: neon green UFO head with foil crown and oversized keyline.
+- `mall_sticker_1998`: jelly highlight + stepped pearlescent bands.
+- `micro_chrome`: crisp metallic lettering with minimal edge effects.
+- `illegally_shiny`: intentionally exaggerated animated chromatic sweeps and glint explosions (artistic effect, not physical claim).
+
+## Existing repos
+Prioritize reusing `structural_color`, `thin_film_iridescence`, `sparkles`, `shiny`, `sparklebae` and `color_cycling` rather than rewriting their effects. This repo should mainly **orchestrate style presets** around shared render primitives. Later use as a modular finish for `sticker_slop` or commercial forks only after separation and testing.
+
+## Tests / win condition
+Input mask alpha must survive transparent PNG export; same input+seed+phase reproduces identical output; 64 px icon stays legible; optional animated glints preserve masks between frames. Sample presets have screenshots and parameter manifests.
+
+## Closing directive
+Audit existing reflective/glitter code and implement an adapter for one proven finish before adding new shaders. First deliverable: apply 3 clearly different foil/sticker treatments to the *same* SVG dingbat with transparent PNG export, without paid image-generation calls.
