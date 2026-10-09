@@ -1,0 +1,44 @@
+# guilloche_engine — REPO SEED
+Status: SPECIFICATION ONLY. Not an existing standalone engine.
+
+## The Goldmine
+Precise parametric engraving-like curves that can become borders, security-seal-inspired ornaments, circular medallions, corner decorations, hairline lattices and dingbat glyphs. This generator should be vector-native: SVG first, raster second. Not for reproducing any actual currency, certificate or official security document.
+
+## Math: hypotrochoids and epicyclic families
+A hypotrochoid, with fixed radius R, inner rolling circle radius r, pen offset d:
+x(t)=(R-r)cos(t) + d cos(((R-r)/r)t)
+y(t)=(R-r)sin(t) - d sin(((R-r)/r)t)
+With an outer rolling circle (epitrochoid):
+x(t)=(R+r)cos(t) - d cos(((R+r)/r)t)
+y(t)=(R+r)sin(t) - d sin(((R+r)/r)t)
+Check closure analytically when radii ratios are rational; limit loops safely for irrational ratios. Include Lissajous and harmonic polar curves as related, explicitly distinct generators.
+
+## Pipeline
+1. Define a curve family and normalized parameter controls.
+2. Generate points with deterministic sampling using curvature tolerance (never just an arbitrarily low point count).
+3. Layer several phase-offset, radially scaled or transformed families into ornaments.
+4. Apply clipping, stroke variations and optional masks.
+5. Export scalable SVG paths and optional one-color filled cutouts. Convert strokes to outlines **before** handing to a font tool if needed.
+6. Optional palette/pixel preview/animated draw-on, separated from mathematical path data.
+
+## Modules
+`src/curves/hypotrochoid.js`, `epitrochoid.js`, `harmonic.js`, `src/core/sample.js`, `src/layout/medallion.js`, `src/export/svg.js`, `src/export/png.js`, `src/presets/index.js`, `tests/`, `docs/math-reference.md`, `context.manifest.json`.
+
+## Knobs
+`R, r, d, turns, harmonic_count, phase, stroke_width, layers, radial_repeat, resolution, symmetry_order, stroke_to_path, palette, background, seed`.
+
+## Visual regimes
+- `alien_banknote`: densely nested tiny loops with fourfold rotation, decorative only.
+- `laser_rose`: radial harmonic bundles with coarse-to-fine gaps.
+- `bubble_engraving`: thick, smooth negative-space loops legible at 64 px.
+- `circuit_paisley`: two interleaved but separately selectable paths.
+- `microfiligree`: high-detail large-canvas output (not suitable as tiny glyph without simplification).
+
+## Existing sibling connections
+`harmonograph` for related mechanical drawing dynamics; `mathematical_textiles` / `lace_patterns` for pattern rules; `circle_inversion` planned as post-transform; `daddydingy` for dingbat mapping; `sparklebae` for glitter/foil previews. Do not reimplement a harmonograph if one exists.
+
+## Tests / definition of done
+At least three mathematical families render deterministic nonempty closed or finite paths; no NaN on edge controls; export viewBox includes all paths; 9 independent SVG components can be produced in a sheet and selected individually. Verify hypotrochoid symmetry at known ratios.
+
+## Closing directive
+Build a clean, tiny SVG path engine before any UI or polished colors. Prioritize controllable negative space and readable small-scale silhouettes, then add layered ornament systems and animation. Package code and presets only after proven outputs.
