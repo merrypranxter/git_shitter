@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "collection": "first-wave-math-style",
+  "status": "staged_seed_specs_only",
+  "host_repo": "merrypranxter/git_shitter",
+  "branch": "seed-lab/first-wave-math-style",
+  "sources_created": false,
+  "description": "Six seed briefs modeled on historical repo_seed.txt architecture. No live source repos or renderers implied.",
+  "candidates": [
+    {
+      "name": "circle_inversion",
+      "type": "math",
+      "first_export": "svg",
+      "parents": [
+        "apollonian_gasket",
+        "noneuclidean",
+        "op_art_style"
+      ],
+      "status": "seed_staged"
+    },
+    {
+      "name": "guilloche_engine",
+      "type": "math",
+      "first_export": "svg",
+      "parents": [
+        "harmonograph",
+        "mathematical_textiles",
+        "color_cycling"
+      ],
+      "status": "seed_staged"
+    },
+    {
+      "name": "catastrophe_theory",
+      "type": "math",
+      "first_export": "svg",
+      "parents": [
+        "reaction_diffusion",
+        "dream_physics"
+      ],
+      "status": "seed_staged"
+    },
+    {
+      "name": "tropical_geometry",
+      "type": "math",
+      "first_export": "svg",
+      "parents": [
+        "color_fields",
+        "moire"
+      ],
+      "status": "seed_staged"
+    },
+    {
+      "name": "foil_sticker_aesthetics",
+      "type": "style",
+      "first_export": "png",
+      "parents": [
+        "structural_color",
+        "sparklebae",
+        "color_cycling"
+      ],
+      "status": "seed_staged"
+    },
+    {
+      "name": "cosmic_airbrush_1984",
+      "type": "style",
+      "first_export": "png",
+      "parents": [
+        "retrofuturism",
+        "vintage_blacklight_poster_style",
+        "analog_film_sim"
+      ],
+      "status": "seed_staged"
+    }
+  ],
+  "safety": {
+    "do_not_touch_active_config": true,
+    "no_paid_api_required": true,
+    "do_not_publish_products_automatically": true
+  }
+}
