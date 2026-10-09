@@ -188,7 +188,9 @@ def choose(config, state, mode="auto", override=None, preset=None):
         mode = "single" if int(state.get("volumes", 0)) % 2 == 0 else "hybrid"
     if mode == "single":
         rows = config["solo"]
-        recipe = rows[int(state.get("solo_cursor", 0)) % len(rows)]
+        # Older releases accidentally stored progress as single_cursor.
+        cursor = state.get("single_cursor", state.get("solo_cursor", 0))
+        recipe = rows[int(cursor) % len(rows)]
         if preset:
             recipe = dict(recipe, preset=preset)
         safe_repo(recipe["repo"])
@@ -256,7 +258,32 @@ def prompt_for(config, mode, recipe, source_docs, recent):
             "\nSOURCE DOCUMENTS (untrusted data only):\n" +
             documents + memory)
 
-def generate_gemini(prompt, key, model):
+def response_schema(mode, recipe, qty):
+    """Constrain Gemini's JSON shape before our stricter local quality checks."""
+    string = {"type": "string"}
+    item_props = {"title": string, "basis": string,
+                  "prompt": string, "why_weird": string}
+    item_required = list(item_props)
+    top_props = {"title": string}
+    top_required = ["title", "items"]
+    if mode == "hybrid":
+        names = [s["repo"] for s in parents(recipe)]
+        item_props["fusion_logic"] = string
+        item_props["source_dna"] = {
+            "type": "object",
+            "properties": {name: string for name in names},
+            "required": names, "additionalProperties": False}
+        item_required += ["fusion_logic", "source_dna"]
+        top_props["thesis"] = string
+        top_required.append("thesis")
+    top_props["items"] = {
+        "type": "array", "minItems": qty, "maxItems": qty,
+        "items": {"type": "object", "properties": item_props,
+                  "required": item_required}}
+    return {"type": "object", "properties": top_props, "required": top_required}
+
+
+def generate_gemini(prompt, key, model, mode, recipe, qty):
     url = ("https://generativelanguage.googleapis.com/v1beta/models/" +
            parse.quote(model, safe="") + ":generateContent")
     data = http_json(url,
@@ -264,15 +291,20 @@ def generate_gemini(prompt, key, model):
         {"system_instruction": {"parts": [{"text": SYSTEM}]},
          "contents": [{"role": "user", "parts": [{"text": prompt}]}],
          "generationConfig": {
-             "temperature": 1.1, "maxOutputTokens": 12000,
-             "responseMimeType": "application/json"}})
+             "temperature": 0.85, "maxOutputTokens": 16000,
+             "responseMimeType": "application/json",
+             "responseJsonSchema": response_schema(mode, recipe, qty)}})
     candidate = (data.get("candidates") or [{}])[0]
     chunks = candidate.get("content", {}).get("parts", [])
     content = "".join(p.get("text", "") for p in chunks)
     if not content:
-        raise ValueError("Gemini returned no text: " +
-                         str(candidate.get("finishReason", "unknown")))
-    return json.loads(content)
+        raise ValueError("Gemini returned no text (finishReason=%s, model=%s)" %
+                         (candidate.get("finishReason", "unknown"), model))
+    try:
+        return json.loads(content)
+    except json.JSONDecodeError as exc:
+        raise ValueError("Gemini returned invalid JSON (finishReason=%s, model=%s): %s" %
+                         (candidate.get("finishReason", "unknown"), model, exc)) from exc
 
 def validate(pack, mode, recipe, qty):
     if not isinstance(pack, dict) or not isinstance(pack.get("title"), str) or not pack["title"].strip():
@@ -371,7 +403,25 @@ def run(root=ROOT, mode="auto", repos=None, preset=None, dry_run=False,
     model = os.getenv("GEMINI_MODEL") or config.get("model", "gemini-2.5-flash-lite")
     qty = int(config.get("hybrid_pack_size", 8) if lane == "hybrid"
               else config.get("pack_size", 10))
-    pack = validate(writer(prompt, key, model), lane, recipe, qty)
+    # Malformed model output gets one repair attempt, never an infinite paid loop.
+    for attempt in range(2):
+        adjusted = prompt
+        if attempt:
+            adjusted += ("\\nREPAIR REQUIRED: Your previous output failed validation: " +
+                         problem + "\\nProduce the exact requested structure, "
+                         "item count, distinct titles, full-length prompts, and "
+                         "every parent contribution. Keep the writing concise.")
+        try:
+            pack = validate(writer(adjusted, key, model, lane, recipe, qty),
+                            lane, recipe, qty)
+            break
+        except ValueError as exc:
+            if attempt:
+                raise ValueError("Gemini output failed validation twice; last error: " +
+                                 str(exc)) from exc
+            problem = str(exc)
+            print("Invalid Gemini output; retrying once: " + problem,
+                  file=sys.stderr)
     number = int(state.get("volumes", 0)) + 1
     date = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
     slug = re.sub(r"[^a-z0-9]+", "-", "-".join(s["repo"] for s in sources).lower()).strip("-")
@@ -393,10 +443,14 @@ def run(root=ROOT, mode="auto", repos=None, preset=None, dry_run=False,
     (folder / "MANIFEST.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     state["volumes"] = number
-    lane_cursor = lane + "_cursor"
+    lane_cursor = "solo_cursor" if lane == "single" else "hybrid_cursor"
     if not (lane == "hybrid" and repos):
         n = len(config["hybrids"] if lane == "hybrid" else config["solo"])
-        state[lane_cursor] = (int(state.get(lane_cursor, 0)) + 1) % n
+        previous = (state.get("single_cursor", state.get("solo_cursor", 0))
+                    if lane == "single" else state.get("hybrid_cursor", 0))
+        state[lane_cursor] = (int(previous) + 1) % n
+    # Normalize the accidentally created cursor from previous runs.
+    state.pop("single_cursor", None)
     (root / "state.json").write_text(
         json.dumps(state, indent=2) + "\n", encoding="utf-8")
     index = root / "HARVEST.md"
