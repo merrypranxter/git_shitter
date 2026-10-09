@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "dingbat",
+  "date": "2026-10-09",
+  "sources": [
+    {
+      "repo": "Mathgasm",
+      "url": "https://github.com/merrypranxter/Mathgasm",
+      "role": "unusual math, topology, alien closed contours"
+    }
+  ]
+}
