@@ -1,0 +1,65 @@
+{
+  "title": "Mathgasm: Alien Closed Contours",
+  "items": [
+    {
+      "title": "Turing Pattern Bloom",
+      "basis": "The roadmap mentions a Reaction–Diffusion module for Turing patterns. These patterns often exhibit complex, repeating structures reminiscent of biological forms or natural textures.",
+      "prompt": "black and white flat 2D vector silhouettes of intricate, overlapping Turing pattern blooms, organic cellular structures with closed contours, large gaps, on white background",
+      "why_weird": "Abstracting biological pattern formation (Turing) into static, non-biological, alien glyphs with strong negative space."
+    },
+    {
+      "title": "Glitch Accumulation Manifold",
+      "basis": "The roadmap mentions 'Entropy mask + glitch accumulation'. This suggests a process of degradation and layering that could create complex, fractured shapes.",
+      "prompt": "black and white flat 2D vector silhouettes of abstract, layered glitch accumulations, fractured closed contours with sharp edges, digital noise artifacts forming solid shapes, on white background",
+      "why_weird": "Visualizing 'glitch' not as an error, but as a constructive force defining alien geometric forms."
+    },
+    {
+      "title": "Noise Field Incursion",
+      "basis": "The repo discusses 'noise fields' and 'math texture synthesis'. This implies generating complex spatial data that could define boundaries.",
+      "prompt": "black and white flat 2D vector silhouettes derived from dense mathematical noise fields, smooth closed contours emerging from chaotic textures, unsettling alien biomorphic shapes, on white background",
+      "why_weird": "Treating abstract noise fields as a physical medium from which solid, closed geometric entities are carved out."
+    },
+    {
+      "title": "Prompt Compiler's Crystal",
+      "basis": "The 'prompt compiler' suggests a system that translates complex settings into dense, potentially structured outputs. This can be imagined as a crystallization process.",
+      "prompt": "black and white flat 2D vector silhouettes resembling faceted crystals, grown from algorithmic compilation, sharp internal edges and smooth outer closed contours, on white background",
+      "why_weird": "Personifying the prompt compilation process as the genesis of crystalline, alien structures."
+    },
+    {
+      "title": "Provider Adapter's Interface",
+      "basis": "The repo has 'provider adapters' for different AI art services. These could be visualized as complex, functional interfaces or gateways.",
+      "prompt": "black and white flat 2D vector silhouettes of alien interface elements, structured geometric forms with interlocking closed contours, highly abstract and functional-looking, on white background",
+      "why_weird": "Representing abstract software architecture (API adapters) as a physical, alien geometric language."
+    },
+    {
+      "title": "Masked Entropy Gate",
+      "basis": "The 'entropy mask' concept suggests shaping randomness. Imagine this as a stencil for chaos, defining enclosed regions.",
+      "prompt": "black and white flat 2D vector silhouettes of abstract gates or portals formed by masked entropy, clean geometric outlines against implied chaotic backgrounds, solid closed contours, on white background",
+      "why_weird": "Using the idea of an entropy mask to create solid, defined shapes that suggest a barrier or gateway to the abstract."
+    },
+    {
+      "title": "Deterministic Cache Echo",
+      "basis": "The 'deterministic cache' implies repeatable, structured generation. Imagine this as a form that leaves a repeatable imprint or echo.",
+      "prompt": "black and white flat 2D vector silhouettes of interlocking, repeating alien sigils, derived from deterministic generation, precise closed contours forming complex patterns, on white background",
+      "why_weird": "Visualizing the concept of 'deterministic caching' as the generation of identical, intricate alien emblems."
+    },
+    {
+      "title": "Local Math Texture Labyrinth",
+      "basis": "The 'local math texture synth' is a core component. Imagine generated textures forming enclosed, labyrinthine paths.",
+      "prompt": "black and white flat 2D vector silhouettes of abstract labyrinths and mazes, derived from mathematical textures, solid walls forming closed contours, intricate pathways, on white background",
+      "why_weird": "Transforming a texture synthesis tool into a generator of solid, playable alien mazes."
+    },
+    {
+      "title": "Image-to-Image Anomaly",
+      "basis": "The roadmap mentions an 'Init-image / img2img pipeline'. This can be interpreted as deforming and abstracting an input image into alien forms.",
+      "prompt": "black and white flat 2D vector silhouettes of highly abstract, deconstructed forms that originated from an image, sharp closed contours breaking down familiar shapes, on white background",
+      "why_weird": "Representing the img2img process as a form of alchemical transmutation, turning familiar shapes into alien glyphs."
+    },
+    {
+      "title": "Preset Entity Bloom",
+      "basis": "The 'presets' feature suggests saved, reusable configurations, akin to pre-defined entities or blueprints.",
+      "prompt": "black and white flat 2D vector silhouettes of complex, pre-defined alien glyphs, modular components fitting together, each a distinct closed contour, inspired by algorithmic presets, on white background",
+      "why_weird": "Imagining saved 'presets' as generating unique, pre-fabricated alien entities or symbols."
+    }
+  ]
+}

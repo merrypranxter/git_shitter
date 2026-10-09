@@ -1,5 +1,6 @@
 {
-  "volumes": 0,
+  "volumes": 1,
   "solo_cursor": 0,
-  "hybrid_cursor": 0
+  "hybrid_cursor": 0,
+  "single_cursor": 1
 }
