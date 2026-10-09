@@ -39,6 +39,63 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(engine.choose(CFG, {"volumes": 0})[0], "single")
         self.assertEqual(engine.choose(CFG, {"volumes": 1})[0], "hybrid")
         self.assertEqual(engine.choose(CFG, {"volumes": 2})[0], "single")
+    def test_legacy_solo_cursor_is_migrated_and_advances(self):
+        with TemporaryDirectory() as tmp, patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}):
+            root = Path(tmp)
+            cfg = dict(CFG, solo=[
+                {"repo": "Mathgasm", "preset": "dingbat"},
+                {"repo": "fractals", "preset": "dingbat"}])
+            (root / "config.json").write_text(json.dumps(cfg))
+            # First successful archive in production used this wrong cursor name.
+            (root / "state.json").write_text(json.dumps({
+                "volumes": 2, "solo_cursor": 0, "single_cursor": 1,
+                "hybrid_cursor": 0}))
+            lane, recipe = engine.choose(cfg, engine.get_json(root / "state.json"))
+            self.assertEqual((lane, recipe["repo"]), ("single", "fractals"))
+            engine.run(root=root, mode="single",
+                       fetcher=lambda *args: "Verified source README",
+                       writer=lambda *args: SIMPLE)
+            state = engine.get_json(root / "state.json")
+            self.assertEqual(state["solo_cursor"], 0)
+            self.assertNotIn("single_cursor", state)
+
+    def test_hybrid_json_schema_restricts_parent_dna_and_item_count(self):
+        schema = engine.response_schema("hybrid", CFG["hybrids"][0], 2)
+        entries = schema["properties"]["items"]
+        self.assertEqual((entries["minItems"], entries["maxItems"]), (2, 2))
+        item = entries["items"]
+        self.assertIn("source_dna", item["required"])
+        dna = item["properties"]["source_dna"]
+        self.assertEqual(set(dna["required"]), {"slime_molds", "klein-fluid-sim"})
+        self.assertFalse(dna["additionalProperties"])
+
+    def test_gemini_payload_requests_structured_json(self):
+        fake_response = {"candidates": [{"content": {
+            "parts": [{"text": json.dumps(SIMPLE)}]}}]}
+        with patch.object(engine, "http_json", return_value=fake_response) as api:
+            result = engine.generate_gemini("prompt", "fake-key", "fake-model",
+                                            "single", CFG["solo"][0], 2)
+        self.assertEqual(result["title"], SIMPLE["title"])
+        payload = api.call_args.args[2]
+        generation = payload["generationConfig"]
+        self.assertEqual(generation["responseMimeType"], "application/json")
+        self.assertEqual(generation["responseJsonSchema"]["properties"]
+                         ["items"]["minItems"], 2)
+
+    def test_invalid_first_model_result_gets_one_repair_attempt(self):
+        with TemporaryDirectory() as tmp, patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}):
+            root = Path(tmp); self.write(root)
+            calls = []
+            def flaky_writer(prompt, *args):
+                calls.append(prompt)
+                return {"title": "Short", "items": []} if len(calls) == 1 else SIMPLE
+            result = engine.run(root=root, mode="single",
+                fetcher=lambda *args: "Verified source README",
+                writer=flaky_writer)
+            self.assertIn("Saved volume-001", result)
+            self.assertEqual(len(calls), 2)
+            self.assertIn("REPAIR REQUIRED", calls[1])
+
     def test_require_two_or_three_different_parents(self):
         with self.assertRaises(ValueError):
             engine.parents({"sources": ["A", "A"]})
