@@ -32,3 +32,7 @@ See `first-wave/manifest.json` for the machine-readable queue and `BACKLOG.md` f
 Seed in this branch → verify against existing GitHub code → create independent laboratory repo → add `repo_seed.txt` and `context.manifest.json` → implement free deterministic rendering → optional Git Shitter source ingestion after repo exists → optional separate commercial fork/product manifest.
 
 **This staging branch must not be treated as a functioning source repo by scheduled Git Shitter.**
+
+## Custom agents
+
+The [agent index](AGENTS_INDEX.md) links **all 18** subject-specialist GitHub Copilot custom agent templates, including the six first-wave seeds and twelve backlog candidates. All are staged templates; none have yet been installed into new independent source repos.
