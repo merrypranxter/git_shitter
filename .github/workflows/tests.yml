@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/**'
       - 'tests/**'
+      - 'skills/daddy-dingy-dingbat-sheets/**'
       - '.github/workflows/tests.yml'
 
 permissions:
