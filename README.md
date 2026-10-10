@@ -14,6 +14,14 @@ The first curated crossbreeds include **slime_molds × klein-fluid-sim × LV426*
 
 **The weird guy has standards.** He must establish a concrete role for each parent, describe how their properties interact and derive a distinctive visual/technical consequence. Simply repeating names or blending adjectives is not enough. He must distinguish real source facts from speculative visual mutations. Weak/missing source contribution output is rejected and the archive state is not advanced.
 
+### Daddy Dingy contact sheets — automatic for every `dingbat` preset
+
+Any **solo, hybrid or manual** harvest using `--preset dingbat` loads the complete [Daddy Dingy sheet skill](skills/daddy-dingy-dingbat-sheets/SKILL.md) into Gemini's instructions. This is the actual generator path in [scripts/engine.py](scripts/engine.py), not just a document sitting in the repo.
+
+**Important distinction:** a typical solo harvest still contains 10 different prompt ideas (or 8 for hybrid), but **each individual dingbat prompt** generates **one 1:1 square sheet with exactly nine isolated motifs** in a spacious, invisible 3×3. Pure black on white; generous clear gaps; fine detailing, dots, stippling and ornamentation are welcome. Composition and one-fill readability matter more than line thickness.
+
+To prevent the model from forgetting these constraints, the engine also appends a mandatory contact-sheet render contract to **every archived dingbat prompt** in both `PROMPTS.md` and `prompts.json`. Existing archived volumes remain historical; only new harvests use the updated rules. Other formats (`gif_asset`, `image_art`, `shader`, `feature`) are unchanged. This generates prompts, **not actual rendered images**.
+
 ### Activate once
 
 1. Go to **Settings → Secrets and variables → Actions** for this GitHub repository.
