@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "dingbat",
+  "date": "2026-10-10",
+  "sources": [
+    {
+      "repo": "fractals",
+      "url": "https://github.com/merrypranxter/fractals",
+      "role": "boundary iteration and scale tricks"
+    }
+  ]
+}
