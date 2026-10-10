@@ -37,6 +37,9 @@ jobs:
           python-version: '3.12'
       - name: Run tests
         run: python -m unittest discover -s tests -v
+      # scripts/engine.py automatically loads the Daddy Dingy SKILL.md for
+      # dingbat presets and appends the extraction-safe render contract to
+      # every saved prompt in both single and hybrid harvests.
       - name: Grow the crop
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
