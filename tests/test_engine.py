@@ -154,5 +154,59 @@ class EngineTests(unittest.TestCase):
             self.assertFalse((root / "state.json").exists())
             self.assertFalse((root / "harvest").exists())
 
+
+    def test_dingbat_skill_loaded_for_solo_and_crossbreeds(self):
+        skill = engine.load_dingbat_skill()
+        self.assertIn("composition over complexity", skill)
+        self.assertIn("65–75%", skill)
+        self.assertIn("Delicate but readable black linework", skill)
+        for lane, recipe, docs in [
+            ("single", CFG["solo"][0], ["math source"]),
+            ("hybrid", CFG["hybrids"][0], ["mold source", "Klein source"])
+        ]:
+            text = engine.prompt_for(CFG, lane, recipe, docs, [])
+            self.assertIn("AUTHORITATIVE DADDY DINGY SHEET SKILL", text)
+            self.assertIn("EXACTLY NINE", text)
+            self.assertIn("invisible", text.lower())
+            self.assertIn("65–75%", text)
+            self.assertIn("#000000", text)
+            self.assertNotIn("Each prompt creates 6–12", text)
+            self.assertNotIn("No gray, gradients, lighting, texture", text)
+
+    def test_dingbat_contract_applies_to_each_harvested_prompt(self):
+        with TemporaryDirectory() as tmp, patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}):
+            root = Path(tmp); self.write(root)
+            original = SIMPLE["items"][0]["prompt"]
+            result = engine.run(root=root, mode="single",
+                                fetcher=lambda *args: "Verified source README",
+                                writer=lambda *args: SIMPLE)
+            self.assertIn("Saved volume-001", result)
+            folder = next((root / "harvest").iterdir())
+            saved = json.loads((folder / "prompts.json").read_text())
+            self.assertEqual(len(saved["items"]), 2)  # pack size, not glyph count
+            for item in saved["items"]:
+                prompt = item["prompt"]
+                for phrase in ("EXACTLY NINE", "1:1 square", "INVISIBLE 3x3",
+                               "65-75%", "#000000", "#FFFFFF",
+                               "stippling", "Sparkle Bae", "diagonally",
+                               "composition over simplicity"):
+                    self.assertIn(phrase, prompt)
+            human = (folder / "PROMPTS.md").read_text()
+            self.assertEqual(human.count("MANDATORY DADDY DINGY RENDER CONTRACT"), 2)
+            self.assertEqual(SIMPLE["items"][0]["prompt"], original)
+
+    def test_non_dingbat_preset_is_unchanged(self):
+        before = json.loads(json.dumps(SIMPLE))
+        after = engine.apply_preset_contract(before, "gif_asset")
+        self.assertIs(after, before)
+        self.assertNotIn("MANDATORY DADDY DINGY", after["items"][0]["prompt"])
+
+    def test_missing_skill_causes_clear_failure(self):
+        with TemporaryDirectory() as tmp, patch.object(
+            engine, "DINGBAT_SKILL_PATH", Path(tmp) / "absent.md"
+        ):
+            with self.assertRaisesRegex(ValueError, "Required Daddy Dingy skill"):
+                engine.prompt_for(CFG, "single", CFG["solo"][0], ["source"], [])
+
 if __name__ == "__main__":
     unittest.main()
