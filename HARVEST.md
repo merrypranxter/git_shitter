@@ -8,3 +8,4 @@
 - **HYBRID** [Volume 006 — ShaderForge Dream Fractals](harvest/volume-006-hybrid-shaderforge3-dream-physics-fractals-dingbat/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-10-09
 - **SINGLE** [Volume 007 — Boundary Iteration and Scale Tricks Glyphs](harvest/volume-007-single-fractals-dingbat/PROMPTS.md) — fractals · 2026-10-10
 - **HYBRID** [Volume 008 — Mathematical Grammar of Living Connectivity](harvest/volume-008-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-10-11
+- **SINGLE** [Volume 009 — Turing Morphogenesis and Cut-Paper Outlines](harvest/volume-009-single-reaction-diffusion-dingbat/PROMPTS.md) — reaction_diffusion · 2026-10-11
