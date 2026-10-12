@@ -10,3 +10,4 @@
 - **HYBRID** [Volume 008 — Mathematical Grammar of Living Connectivity](harvest/volume-008-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-10-11
 - **SINGLE** [Volume 009 — Turing Morphogenesis and Cut-Paper Outlines](harvest/volume-009-single-reaction-diffusion-dingbat/PROMPTS.md) — reaction_diffusion · 2026-10-11
 - **HYBRID** [Volume 010 — Cross-Cultural Fashion Constructs: Algorithmic Embellishment and Material Alchemy](harvest/volume-010-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-10-11
+- **SINGLE** [Volume 011 — Quasicrystal Structures and Aperiodic Symmetry Glyphs](harvest/volume-011-single-quasicrystals-dingbat/PROMPTS.md) — quasicrystals · 2026-10-12
