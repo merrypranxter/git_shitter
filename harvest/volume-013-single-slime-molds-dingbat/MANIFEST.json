@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "dingbat",
+  "date": "2026-10-14",
+  "sources": [
+    {
+      "repo": "slime_molds",
+      "url": "https://github.com/merrypranxter/slime_molds",
+      "role": "growth paths, adaptive branch structures"
+    }
+  ]
+}

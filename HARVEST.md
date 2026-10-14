@@ -12,3 +12,4 @@
 - **HYBRID** [Volume 010 — Cross-Cultural Fashion Constructs: Algorithmic Embellishment and Material Alchemy](harvest/volume-010-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-10-11
 - **SINGLE** [Volume 011 — Quasicrystal Structures and Aperiodic Symmetry Glyphs](harvest/volume-011-single-quasicrystals-dingbat/PROMPTS.md) — quasicrystals · 2026-10-12
 - **HYBRID** [Volume 012 — Browser-Based Generative Typography Toolkit](harvest/volume-012-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-10-13
+- **SINGLE** [Volume 013 — Slime Mold Growth Mechanisms for Dingbat Contact Sheets](harvest/volume-013-single-slime-molds-dingbat/PROMPTS.md) — slime_molds · 2026-10-14
