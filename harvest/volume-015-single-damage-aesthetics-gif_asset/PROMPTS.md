@@ -1,0 +1,126 @@
+# VOLUME 015 — Animated GIF Asset Fragments from Damaged Media
+
+**MODE:** SINGLE · **FORMAT:** gif_asset · **DATE:** 2026-10-16
+
+**SOURCE:** [damage_aesthetics](https://github.com/merrypranxter/damage_aesthetics)
+
+## 01 — VHS Tracking Wobble Ghosting
+
+**BASIS:** analog video failures, playback instability, temporal ghosting
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A single, solid silhouette of a vintage CRT monitor displaying a highly distorted, color-shifted image. The image should exhibit pronounced vertical tearing and a distinct 'ghost' echo of the primary content, as if tracking is severely misaligned. The ghosted image should be slightly offset and desaturated. Animation: subtle, continuous vertical jitter and occasional horizontal 'snaking' of the scanlines. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Focuses on the specific physical instability of magnetic tape playback (tracking) to create a ghosting effect, distinct from digital temporal artifacts.
+
+---
+
+## 02 — Datamosh Pixel Block Dance
+
+**BASIS:** digital compression artifacts, web recompression damage, datamosh residue
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A sharp, graphic silhouette of a human eye. The 'iris' area is composed of small, shifting, brightly colored pixel blocks that move independently and abruptly, with occasional larger blocks appearing and disappearing. Colors are oversaturated and clash. Animation: rapid, jerky block repositioning and color cycling within the iris, with occasional frame drops causing momentary static. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Isolates the visual symptom of datamoshing (I-frame/P-frame corruption) to create a 'dancing' pixel effect within a contained, organic shape.
+
+---
+
+## 03 — Film Halation Bloom
+
+**BASIS:** film wear and chemical damage, halation
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A stark, black silhouette of a single, stylized flower. Around the edges of the petals and stem, there is a soft, luminous, reddish-orange 'bloom' or halo effect, caused by light scattering within the film emulsion. The bloom should be uneven and diffuse. Animation: a slow, pulsing expansion and contraction of the halation bloom, like a faint heartbeat. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Simulates the specific optical effect of halation in analog film, where light scatters behind bright areas, creating a distinct, almost organic glow around sharp edges.
+
+---
+
+## 04 — JPEG Blockiness Grid
+
+**BASIS:** digital compression artifacts, web recompression damage
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A geometric, hard-edged silhouette of a pyramid. The surface of the pyramid is visibly segmented into large, distinct square blocks, characteristic of low-quality JPEG compression. The blocks have slightly different, muted color values, creating a mosaic effect. Animation: subtle, almost imperceptible shifting and 'breathing' of the block grid, as if the compression is unstable. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Uses the macroblocking artifact of JPEG compression as a textural and structural element for a geometric form, emphasizing the grid itself.
+
+---
+
+## 05 — CRT Scanline Jitter
+
+**BASIS:** CRT and display defects, playback instability
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A flat, iconic silhouette of a retro arcade cabinet. The entire surface of the cabinet is overlaid with prominent, slightly wavy horizontal scanlines. These scanlines should exhibit a constant, low-amplitude jitter and occasional brief 'flickers' of brighter intensity. Colors are limited and slightly washed out. Animation: continuous subtle scanline wobble and intermittent, sharp flickers. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Focuses on the physical characteristic of CRT displays – the scanlines – and animates their inherent instability and electrical fluctuation.
+
+---
+
+## 06 — Lens Contamination Smear
+
+**BASIS:** dirty optics and lens contamination
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A circular silhouette of a spotlight beam. Within the beam, there are distinct, semi-transparent 'smears' and 'streaks' of desaturated color, like dirt or oil on a lens. These smears should follow the direction of the beam's edge. Animation: slow, drifting movement of the contamination streaks across the beam's surface, as if being blown by a gentle current. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Simulates the effect of physical contaminants on optical elements, creating abstract, directional smudges that affect perceived light quality.
+
+---
+
+## 07 — Scratched Negative Texture
+
+**BASIS:** film wear and chemical damage, print/scan decay
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A bold, simple silhouette of a human hand. The surface of the hand is heavily textured with fine, irregular, white or light-colored 'scratches' that cut across the form. These scratches should vary in width and length, with some appearing deeper than others. Animation: a subtle, continuous shimmering or 'crawling' effect along the length of the scratches, suggesting wear and tear. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Emphasizes the physical damage of film scratches as a textural overlay, creating a tactile, worn appearance on a solid form.
+
+---
+
+## 08 — Band-Scanned Color Separation
+
+**BASIS:** print/scan/xerox decay, sensor failures
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A stark, graphic silhouette of a lightning bolt. The bolt is rendered with visible horizontal 'bands' where the color channels (RGB) are slightly misaligned and separated, creating chromatic aberration. Each band should have a distinct color shift (e.g., red to the left, blue to the right). Animation: the colored bands slowly slide horizontally, causing the lightning bolt's color to flicker and shift. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Mimics the banding and color separation that can occur during scanning or printing processes due to sensor alignment or mechanical issues.
+
+---
+
+## 09 — Tape Hiss Grain Swarm
+
+**BASIS:** analog video failures, magnetic storage, grain
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A soft, fuzzy silhouette of a cloud. The entire surface of the cloud is covered in a dense, dynamic 'swarm' of tiny, bright speckles, resembling analog tape hiss or film grain. The speckles should appear to move and flicker rapidly. Colors are muted and monochromatic. Animation: constant, energetic, randomized movement of the speckles, creating a 'living' texture. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Focuses on the inherent analog noise ('grain' or 'hiss') as a dynamic textural element that obscures and animates a soft form.
+
+---
+
+## 10 — Codec Color Rot
+
+**BASIS:** digital compression artifacts, web recompression damage, color decay
+
+**IMAGE / IMPLEMENTATION PROMPT:**
+
+A solid, dark silhouette of a sharp-edged crystal. The surface of the crystal exhibits areas where the color has 'rotted' or degraded into muddy, desaturated, or shifted hues, particularly along edges and facets. These degraded areas should appear patchy and uneven. Animation: slow, creeping expansion of the color-rotted areas, as if decay is actively spreading. Output as a transparent GIF layer.
+
+**WHY IT'S WEIRD:** Simulates the visual degradation of color information that can occur during aggressive digital compression or repeated re-encoding, manifesting as localized 'rot'.
+
+---
+

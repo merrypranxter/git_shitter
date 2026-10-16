@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "gif_asset",
+  "date": "2026-10-16",
+  "sources": [
+    {
+      "repo": "damage_aesthetics",
+      "url": "https://github.com/merrypranxter/damage_aesthetics",
+      "role": "experimental signal damage"
+    }
+  ]
+}

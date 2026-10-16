@@ -14,3 +14,4 @@
 - **HYBRID** [Volume 012 — Browser-Based Generative Typography Toolkit](harvest/volume-012-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-10-13
 - **SINGLE** [Volume 013 — Slime Mold Growth Mechanisms for Dingbat Contact Sheets](harvest/volume-013-single-slime-molds-dingbat/PROMPTS.md) — slime_molds · 2026-10-14
 - **HYBRID** [Volume 014 — Export-Friendly Retrofuture Animated Machine Ornaments](harvest/volume-014-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-10-15
+- **SINGLE** [Volume 015 — Animated GIF Asset Fragments from Damaged Media](harvest/volume-015-single-damage-aesthetics-gif_asset/PROMPTS.md) — damage_aesthetics · 2026-10-16
