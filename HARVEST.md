@@ -15,3 +15,4 @@
 - **SINGLE** [Volume 013 — Slime Mold Growth Mechanisms for Dingbat Contact Sheets](harvest/volume-013-single-slime-molds-dingbat/PROMPTS.md) — slime_molds · 2026-10-14
 - **HYBRID** [Volume 014 — Export-Friendly Retrofuture Animated Machine Ornaments](harvest/volume-014-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-10-15
 - **SINGLE** [Volume 015 — Animated GIF Asset Fragments from Damaged Media](harvest/volume-015-single-damage-aesthetics-gif_asset/PROMPTS.md) — damage_aesthetics · 2026-10-16
+- **HYBRID** [Volume 016 — Xenotunnel Morphogenesis: A Klein-Bottle Slime Mold Symbiosis](harvest/volume-016-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-10-17
