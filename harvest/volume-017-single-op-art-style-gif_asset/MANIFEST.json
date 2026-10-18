@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "gif_asset",
+  "date": "2026-10-18",
+  "sources": [
+    {
+      "repo": "op_art_style",
+      "url": "https://github.com/merrypranxter/op_art_style",
+      "role": "moire, optical oscillation and interference"
+    }
+  ]
+}
