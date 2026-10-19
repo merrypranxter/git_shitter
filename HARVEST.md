@@ -17,3 +17,4 @@
 - **SINGLE** [Volume 015 — Animated GIF Asset Fragments from Damaged Media](harvest/volume-015-single-damage-aesthetics-gif_asset/PROMPTS.md) — damage_aesthetics · 2026-10-16
 - **HYBRID** [Volume 016 — Xenotunnel Morphogenesis: A Klein-Bottle Slime Mold Symbiosis](harvest/volume-016-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-10-17
 - **SINGLE** [Volume 017 — Moire and Interference Animated GIF Assets](harvest/volume-017-single-op-art-style-gif_asset/PROMPTS.md) — op_art_style · 2026-10-18
+- **HYBRID** [Volume 018 — Aperiodic Genesis: Quasicrystal Morphogenesis and Reaction-Diffusion Glyphs](harvest/volume-018-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-10-19
