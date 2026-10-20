@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "gif_asset",
+  "date": "2026-10-20",
+  "sources": [
+    {
+      "repo": "early_internet_aesthetic",
+      "url": "https://github.com/merrypranxter/early_internet_aesthetic",
+      "role": "1990s/2000s maximalist web decorations"
+    }
+  ]
+}
