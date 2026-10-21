@@ -19,3 +19,4 @@
 - **SINGLE** [Volume 017 — Moire and Interference Animated GIF Assets](harvest/volume-017-single-op-art-style-gif_asset/PROMPTS.md) — op_art_style · 2026-10-18
 - **HYBRID** [Volume 018 — Aperiodic Genesis: Quasicrystal Morphogenesis and Reaction-Diffusion Glyphs](harvest/volume-018-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-10-19
 - **SINGLE** [Volume 019 — Early Internet Maximalist GIF Assets](harvest/volume-019-single-early-internet-aesthetic-gif_asset/PROMPTS.md) — early_internet_aesthetic · 2026-10-20
+- **HYBRID** [Volume 020 — Moiré-Bent Web GIF Parasites: Compositable Decorative Assets from Geometric Signal Breakdown](harvest/volume-020-hybrid-damage-aesthetics-op-art-style-early-internet-aesthetic-gif_asset/PROMPTS.md) — damage_aesthetics × op_art_style × early_internet_aesthetic · 2026-10-21
