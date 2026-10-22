@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "shader",
+  "date": "2026-10-22",
+  "sources": [
+    {
+      "repo": "shaderforge3",
+      "url": "https://github.com/merrypranxter/shaderforge3",
+      "role": "new real-time image processing mechanisms"
+    }
+  ]
+}
