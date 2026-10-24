@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "image_art",
+  "date": "2026-10-24",
+  "sources": [
+    {
+      "repo": "merry-style",
+      "url": "https://github.com/merrypranxter/merry-style",
+      "role": "maximalist acidic weird imagery"
+    }
+  ]
+}
