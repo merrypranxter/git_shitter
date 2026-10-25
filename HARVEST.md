@@ -23,3 +23,4 @@
 - **SINGLE** [Volume 021 — ShaderForge 3: Real-time Image Processing Mechanisms](harvest/volume-021-single-shaderforge3-shader/PROMPTS.md) — shaderforge3 · 2026-10-22
 - **HYBRID** [Volume 022 — Shader Forge: The Impossible Motion Dream Physics Nexus](harvest/volume-022-hybrid-shaderforge3-dream-physics-fractals-shader/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-10-23
 - **SINGLE** [Volume 023 — New Age Glam Fantasy Visualizations](harvest/volume-023-single-merry-style-image_art/PROMPTS.md) — merry-style · 2026-10-24
+- **HYBRID** [Volume 024 — Living Mathematical Glyphs](harvest/volume-024-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-10-25

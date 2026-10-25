@@ -1,0 +1,17 @@
+{
+  "mode": "hybrid",
+  "preset": "dingbat",
+  "date": "2026-10-25",
+  "sources": [
+    {
+      "repo": "Mathgasm",
+      "url": "https://github.com/merrypranxter/Mathgasm",
+      "role": "topological invariants and math oddities"
+    },
+    {
+      "repo": "slime_molds",
+      "url": "https://github.com/merrypranxter/slime_molds",
+      "role": "adaptive branching networks"
+    }
+  ]
+}
