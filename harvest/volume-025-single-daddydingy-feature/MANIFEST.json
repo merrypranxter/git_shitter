@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "feature",
+  "date": "2026-10-26",
+  "sources": [
+    {
+      "repo": "daddydingy",
+      "url": "https://github.com/merrypranxter/daddydingy",
+      "role": "vector glyphs, keyboard mapping and TTF export"
+    }
+  ]
+}
