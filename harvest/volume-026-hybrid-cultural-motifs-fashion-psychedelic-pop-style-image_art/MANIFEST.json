@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "image_art",
+  "date": "2026-10-27",
+  "sources": [
+    {
+      "repo": "cultural-motifs",
+      "url": "https://github.com/merrypranxter/cultural-motifs",
+      "role": "specific documented motifs, with attribution"
+    },
+    {
+      "repo": "fashion",
+      "url": "https://github.com/merrypranxter/fashion",
+      "role": "garment construction"
+    },
+    {
+      "repo": "psychedelic_pop_style",
+      "url": "https://github.com/merrypranxter/psychedelic_pop_style",
+      "role": "bold pop optical color"
+    }
+  ]
+}
