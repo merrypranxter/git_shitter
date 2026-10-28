@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "image_art",
+  "date": "2026-10-28",
+  "sources": [
+    {
+      "repo": "fashion",
+      "url": "https://github.com/merrypranxter/fashion",
+      "role": "inventive garments and maximalist surfaces"
+    }
+  ]
+}

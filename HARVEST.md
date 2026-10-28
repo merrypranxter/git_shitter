@@ -26,3 +26,4 @@
 - **HYBRID** [Volume 024 — Living Mathematical Glyphs](harvest/volume-024-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-10-25
 - **SINGLE** [Volume 025 — Daddy Dingy: TTF Vector Glyph Innovations](harvest/volume-025-single-daddydingy-feature/PROMPTS.md) — daddydingy · 2026-10-26
 - **HYBRID** [Volume 026 — Morphological Fashion Inventions: Cross-Cultural Motif and Psychedelic Pop Synthesis](harvest/volume-026-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-10-27
+- **SINGLE** [Volume 027 — Maximalist Surfaces and Inventive Garments: A Fashion Prompt Lexicon](harvest/volume-027-single-fashion-image_art/PROMPTS.md) — fashion · 2026-10-28
