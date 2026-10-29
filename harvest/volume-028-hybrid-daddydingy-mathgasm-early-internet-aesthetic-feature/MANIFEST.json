@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "feature",
+  "date": "2026-10-29",
+  "sources": [
+    {
+      "repo": "daddydingy",
+      "url": "https://github.com/merrypranxter/daddydingy",
+      "role": "SVG-to-TTF font creation"
+    },
+    {
+      "repo": "Mathgasm",
+      "url": "https://github.com/merrypranxter/Mathgasm",
+      "role": "mathematical motif structures"
+    },
+    {
+      "repo": "early_internet_aesthetic",
+      "url": "https://github.com/merrypranxter/early_internet_aesthetic",
+      "role": "GIF culture and kitschy decoration"
+    }
+  ]
+}
