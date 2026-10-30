@@ -28,3 +28,4 @@
 - **HYBRID** [Volume 026 — Morphological Fashion Inventions: Cross-Cultural Motif and Psychedelic Pop Synthesis](harvest/volume-026-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-10-27
 - **SINGLE** [Volume 027 — Maximalist Surfaces and Inventive Garments: A Fashion Prompt Lexicon](harvest/volume-027-single-fashion-image_art/PROMPTS.md) — fashion · 2026-10-28
 - **HYBRID** [Volume 028 — Crossbreed Mechanism-Level Recombination](harvest/volume-028-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-10-29
+- **SINGLE** [Volume 029 — MathGasm Dingbat Contact Sheets](harvest/volume-029-single-mathgasm-dingbat/PROMPTS.md) — Mathgasm · 2026-10-30
