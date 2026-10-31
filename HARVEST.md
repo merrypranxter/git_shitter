@@ -29,3 +29,4 @@
 - **SINGLE** [Volume 027 — Maximalist Surfaces and Inventive Garments: A Fashion Prompt Lexicon](harvest/volume-027-single-fashion-image_art/PROMPTS.md) — fashion · 2026-10-28
 - **HYBRID** [Volume 028 — Crossbreed Mechanism-Level Recombination](harvest/volume-028-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-10-29
 - **SINGLE** [Volume 029 — MathGasm Dingbat Contact Sheets](harvest/volume-029-single-mathgasm-dingbat/PROMPTS.md) — Mathgasm · 2026-10-30
+- **HYBRID** [Volume 030 — Retrofuturist Pixel-Voxel Animation Ornaments](harvest/volume-030-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-10-31

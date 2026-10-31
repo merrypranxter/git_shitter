@@ -1,0 +1,22 @@
+{
+  "mode": "hybrid",
+  "preset": "gif_asset",
+  "date": "2026-10-31",
+  "sources": [
+    {
+      "repo": "retrofuturism",
+      "url": "https://github.com/merrypranxter/retrofuturism",
+      "role": "imagined futures"
+    },
+    {
+      "repo": "pixel_voxel",
+      "url": "https://github.com/merrypranxter/pixel_voxel",
+      "role": "pixel and voxel construction"
+    },
+    {
+      "repo": "remotion",
+      "url": "https://github.com/merrypranxter/remotion",
+      "role": "procedural animation"
+    }
+  ]
+}
