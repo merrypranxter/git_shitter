@@ -31,3 +31,4 @@
 - **SINGLE** [Volume 029 — MathGasm Dingbat Contact Sheets](harvest/volume-029-single-mathgasm-dingbat/PROMPTS.md) — Mathgasm · 2026-10-30
 - **HYBRID** [Volume 030 — Retrofuturist Pixel-Voxel Animation Ornaments](harvest/volume-030-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-10-31
 - **SINGLE** [Volume 031 — Fractal Boundary Iteration and Scale Trick Dingbats](harvest/volume-031-single-fractals-dingbat/PROMPTS.md) — fractals · 2026-11-01
+- **HYBRID** [Volume 032 — Xenomorphic Mycelial Networks: A Klein-Bottle Biome](harvest/volume-032-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-11-02
