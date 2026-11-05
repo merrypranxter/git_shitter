@@ -34,3 +34,4 @@
 - **HYBRID** [Volume 032 — Xenomorphic Mycelial Networks: A Klein-Bottle Biome](harvest/volume-032-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-11-02
 - **SINGLE** [Volume 033 — Reaction-Diffusion Cut-Paper Morphogenesis Glyphs](harvest/volume-033-single-reaction-diffusion-dingbat/PROMPTS.md) — reaction_diffusion · 2026-11-03
 - **HYBRID** [Volume 034 — Quasicrystalline Morphogenesis Glyphs](harvest/volume-034-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-11-04
+- **SINGLE** [Volume 035 — Quasicrystal Inspired Dingbat Glyphs](harvest/volume-035-single-quasicrystals-dingbat/PROMPTS.md) — quasicrystals · 2026-11-05

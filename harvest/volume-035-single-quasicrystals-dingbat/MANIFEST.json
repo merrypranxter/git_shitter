@@ -1,0 +1,12 @@
+{
+  "mode": "single",
+  "preset": "dingbat",
+  "date": "2026-11-05",
+  "sources": [
+    {
+      "repo": "quasicrystals",
+      "url": "https://github.com/merrypranxter/quasicrystals",
+      "role": "aperiodic symmetry and strange repetition"
+    }
+  ]
+}
