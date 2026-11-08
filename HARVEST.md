@@ -37,3 +37,4 @@
 - **SINGLE** [Volume 035 — Quasicrystal Inspired Dingbat Glyphs](harvest/volume-035-single-quasicrystals-dingbat/PROMPTS.md) — quasicrystals · 2026-11-05
 - **HYBRID** [Volume 036 — Moire-Bent Web GIF Parasites: Compositable Geometric Signal Breakdown](harvest/volume-036-hybrid-damage-aesthetics-op-art-style-early-internet-aesthetic-gif_asset/PROMPTS.md) — damage_aesthetics × op_art_style × early_internet_aesthetic · 2026-11-06
 - **SINGLE** [Volume 037 — Slime Mold Adaptive Growth Structures](harvest/volume-037-single-slime-molds-dingbat/PROMPTS.md) — slime_molds · 2026-11-07
+- **HYBRID** [Volume 038 — Impossible Motion Fractals in Pixel Space](harvest/volume-038-hybrid-shaderforge3-dream-physics-fractals-shader/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-11-08
