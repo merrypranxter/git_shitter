@@ -40,3 +40,4 @@
 - **HYBRID** [Volume 038 — Impossible Motion Fractals in Pixel Space](harvest/volume-038-hybrid-shaderforge3-dream-physics-fractals-shader/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-11-08
 - **SINGLE** [Volume 039 — Experimental Signal Damage Aesthetics](harvest/volume-039-single-damage-aesthetics-gif_asset/PROMPTS.md) — damage_aesthetics · 2026-11-09
 - **HYBRID** [Volume 040 — Mathematical Grammars of Living Connectivity](harvest/volume-040-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-11-10
+- **SINGLE** [Volume 041 — Moiré and Interference GIF Assets](harvest/volume-041-single-op-art-style-gif_asset/PROMPTS.md) — op_art_style · 2026-11-11
