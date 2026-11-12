@@ -41,3 +41,4 @@
 - **SINGLE** [Volume 039 — Experimental Signal Damage Aesthetics](harvest/volume-039-single-damage-aesthetics-gif_asset/PROMPTS.md) — damage_aesthetics · 2026-11-09
 - **HYBRID** [Volume 040 — Mathematical Grammars of Living Connectivity](harvest/volume-040-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-11-10
 - **SINGLE** [Volume 041 — Moiré and Interference GIF Assets](harvest/volume-041-single-op-art-style-gif_asset/PROMPTS.md) — op_art_style · 2026-11-11
+- **HYBRID** [Volume 042 — Morphological Fashion Inventions via Cross-Repository Recombination](harvest/volume-042-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-11-12
