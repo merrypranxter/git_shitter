@@ -43,3 +43,4 @@
 - **SINGLE** [Volume 041 — Moiré and Interference GIF Assets](harvest/volume-041-single-op-art-style-gif_asset/PROMPTS.md) — op_art_style · 2026-11-11
 - **HYBRID** [Volume 042 — Morphological Fashion Inventions via Cross-Repository Recombination](harvest/volume-042-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-11-12
 - **SINGLE** [Volume 043 — Early Internet Maximalist Web Decorations (GIF Assets)](harvest/volume-043-single-early-internet-aesthetic-gif_asset/PROMPTS.md) — early_internet_aesthetic · 2026-11-13
+- **HYBRID** [Volume 044 — Crossbreed Mechanism-Level Recombination: Browser Features](harvest/volume-044-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-11-14
