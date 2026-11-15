@@ -44,3 +44,4 @@
 - **HYBRID** [Volume 042 — Morphological Fashion Inventions via Cross-Repository Recombination](harvest/volume-042-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-11-12
 - **SINGLE** [Volume 043 — Early Internet Maximalist Web Decorations (GIF Assets)](harvest/volume-043-single-early-internet-aesthetic-gif_asset/PROMPTS.md) — early_internet_aesthetic · 2026-11-13
 - **HYBRID** [Volume 044 — Crossbreed Mechanism-Level Recombination: Browser Features](harvest/volume-044-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-11-14
+- **SINGLE** [Volume 045 — ShaderForge 3: New Real-Time Image Processing Mechanisms](harvest/volume-045-single-shaderforge3-shader/PROMPTS.md) — shaderforge3 · 2026-11-15
