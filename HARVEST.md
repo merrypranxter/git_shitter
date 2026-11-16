@@ -45,3 +45,4 @@
 - **SINGLE** [Volume 043 — Early Internet Maximalist Web Decorations (GIF Assets)](harvest/volume-043-single-early-internet-aesthetic-gif_asset/PROMPTS.md) — early_internet_aesthetic · 2026-11-13
 - **HYBRID** [Volume 044 — Crossbreed Mechanism-Level Recombination: Browser Features](harvest/volume-044-hybrid-daddydingy-mathgasm-early-internet-aesthetic-feature/PROMPTS.md) — daddydingy × Mathgasm × early_internet_aesthetic · 2026-11-14
 - **SINGLE** [Volume 045 — ShaderForge 3: New Real-Time Image Processing Mechanisms](harvest/volume-045-single-shaderforge3-shader/PROMPTS.md) — shaderforge3 · 2026-11-15
+- **HYBRID** [Volume 046 — Export-Friendly Retrofuture Animated Machine Ornaments](harvest/volume-046-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-11-16
