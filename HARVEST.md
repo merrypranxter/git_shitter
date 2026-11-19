@@ -48,3 +48,4 @@
 - **HYBRID** [Volume 046 — Export-Friendly Retrofuture Animated Machine Ornaments](harvest/volume-046-hybrid-retrofuturism-pixel-voxel-remotion-gif_asset/PROMPTS.md) — retrofuturism × pixel_voxel × remotion · 2026-11-16
 - **SINGLE** [Volume 047 — New Age Glam Fantasy Visuals](harvest/volume-047-single-merry-style-image_art/PROMPTS.md) — merry-style · 2026-11-17
 - **HYBRID** [Volume 048 — Non-Euclidean Slime Molds of LV426](harvest/volume-048-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-11-18
+- **SINGLE** [Volume 049 — Dingbat Font Forge Features](harvest/volume-049-single-daddydingy-feature/PROMPTS.md) — daddydingy · 2026-11-19
