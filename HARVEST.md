@@ -49,3 +49,4 @@
 - **SINGLE** [Volume 047 — New Age Glam Fantasy Visuals](harvest/volume-047-single-merry-style-image_art/PROMPTS.md) — merry-style · 2026-11-17
 - **HYBRID** [Volume 048 — Non-Euclidean Slime Molds of LV426](harvest/volume-048-hybrid-slime-molds-klein-fluid-sim-lv426-image_art/PROMPTS.md) — slime_molds × klein-fluid-sim × LV426 · 2026-11-18
 - **SINGLE** [Volume 049 — Dingbat Font Forge Features](harvest/volume-049-single-daddydingy-feature/PROMPTS.md) — daddydingy · 2026-11-19
+- **HYBRID** [Volume 050 — Morphogenesis in Aperiodic Scaffolds](harvest/volume-050-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-11-20
