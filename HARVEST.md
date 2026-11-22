@@ -51,3 +51,4 @@
 - **SINGLE** [Volume 049 — Dingbat Font Forge Features](harvest/volume-049-single-daddydingy-feature/PROMPTS.md) — daddydingy · 2026-11-19
 - **HYBRID** [Volume 050 — Morphogenesis in Aperiodic Scaffolds](harvest/volume-050-hybrid-quasicrystals-reaction-diffusion-dingbat/PROMPTS.md) — quasicrystals × reaction_diffusion · 2026-11-20
 - **SINGLE** [Volume 051 — Experimental Garment Mechanisms and Maximalist Surfaces](harvest/volume-051-single-fashion-image_art/PROMPTS.md) — fashion · 2026-11-21
+- **HYBRID** [Volume 052 — Moiré-Bent Web GIF Parasites: Geometric Signal Breakdown for Compositable Assets](harvest/volume-052-hybrid-damage-aesthetics-op-art-style-early-internet-aesthetic-gif_asset/PROMPTS.md) — damage_aesthetics × op_art_style × early_internet_aesthetic · 2026-11-22
