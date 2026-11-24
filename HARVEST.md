@@ -53,3 +53,4 @@
 - **SINGLE** [Volume 051 — Experimental Garment Mechanisms and Maximalist Surfaces](harvest/volume-051-single-fashion-image_art/PROMPTS.md) — fashion · 2026-11-21
 - **HYBRID** [Volume 052 — Moiré-Bent Web GIF Parasites: Geometric Signal Breakdown for Compositable Assets](harvest/volume-052-hybrid-damage-aesthetics-op-art-style-early-internet-aesthetic-gif_asset/PROMPTS.md) — damage_aesthetics × op_art_style × early_internet_aesthetic · 2026-11-22
 - **SINGLE** [Volume 053 — MathGasm Alien Topologies](harvest/volume-053-single-mathgasm-dingbat/PROMPTS.md) — Mathgasm · 2026-11-23
+- **HYBRID** [Volume 054 — Shader Weaver's Dream Logic: Recursive Motion and Recursive Geometry](harvest/volume-054-hybrid-shaderforge3-dream-physics-fractals-shader/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-11-24
