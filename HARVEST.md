@@ -56,3 +56,4 @@
 - **HYBRID** [Volume 054 — Shader Weaver's Dream Logic: Recursive Motion and Recursive Geometry](harvest/volume-054-hybrid-shaderforge3-dream-physics-fractals-shader/PROMPTS.md) — shaderforge3 × dream_physics × fractals · 2026-11-24
 - **SINGLE** [Volume 055 — Fractal Boundaries and Scale Tricks: Daddy Dingy Sheets](harvest/volume-055-single-fractals-dingbat/PROMPTS.md) — fractals · 2026-11-25
 - **HYBRID** [Volume 056 — Mathematical Grammar of Living Connectivity](harvest/volume-056-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-11-26
+- **SINGLE** [Volume 057 — Reaction-Diffusion Cut-Paper Morphology](harvest/volume-057-single-reaction-diffusion-dingbat/PROMPTS.md) — reaction_diffusion · 2026-11-27
