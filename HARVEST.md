@@ -57,3 +57,4 @@
 - **SINGLE** [Volume 055 — Fractal Boundaries and Scale Tricks: Daddy Dingy Sheets](harvest/volume-055-single-fractals-dingbat/PROMPTS.md) — fractals · 2026-11-25
 - **HYBRID** [Volume 056 — Mathematical Grammar of Living Connectivity](harvest/volume-056-hybrid-mathgasm-slime-molds-dingbat/PROMPTS.md) — Mathgasm × slime_molds · 2026-11-26
 - **SINGLE** [Volume 057 — Reaction-Diffusion Cut-Paper Morphology](harvest/volume-057-single-reaction-diffusion-dingbat/PROMPTS.md) — reaction_diffusion · 2026-11-27
+- **HYBRID** [Volume 058 — Morphological Fashion Inventions: Crossbreed Mechanism-Level Recombination](harvest/volume-058-hybrid-cultural-motifs-fashion-psychedelic-pop-style-image_art/PROMPTS.md) — cultural-motifs × fashion × psychedelic_pop_style · 2026-11-28
